@@ -1,0 +1,301 @@
+﻿<UserControl x:Class="CarboLifeUI.UI.DataViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CarboLifeUI.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1050" IsVisibleChanged="UserControl_IsVisibleChanged" Background="WhiteSmoke">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="MyStyles.xaml"/>
+                <ResourceDictionary Source="MyDataGrid.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+
+    </UserControl.Resources>
+
+    <Grid Background="Transparent">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="64"/>
+            <RowDefinition Height="271*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="114*" Name="grd_Elements"/>
+            <RowDefinition Height="5"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Ribbon x:Name="rbn" Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" Margin="0,-20,0,0"           
+                  Background="WhiteSmoke"
+                  BorderBrush="Gray"
+                  MouseOverBackground="Wheat"
+                  MouseOverBorderBrush="Black"
+                  PressedBackground="WhiteSmoke"
+                  PressedBorderBrush="Black"
+                  CheckedBackground="WhiteSmoke"
+                  CheckedBorderBrush="Black"
+                  FocusedBackground="WhiteSmoke"
+                  FocusedBorderBrush="Black" 
+                Loaded="rbn_Loaded" ContextMenuOpening="fe_ContextMenuOpening" BorderThickness="1"
+                FontFamily="Segoe UI" FontSize="12">
+            <Ribbon.QuickAccessToolBar>
+                <RibbonQuickAccessToolBar ContextMenuOpening="RibbonQuickAccessToolBar_ContextMenuOpening" Visibility="Collapsed">
+                    <DockPanel>
+                        <RibbonButton Label="Btn2"  />
+                    </DockPanel>
+                </RibbonQuickAccessToolBar>
+            </Ribbon.QuickAccessToolBar>
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu Visibility="Collapsed"/>
+            </Ribbon.ApplicationMenu>
+
+            <!-- Ribbon Tab #1: Home -->
+            <RibbonTab Header="General" >
+
+                <!-- Group-->
+                <RibbonGroup x:Name="Group" Header="Group">
+                    <RibbonButton Label="New" Width="64" Height="64" Click="Mnu_NewGroup_Click" LargeImageSource="/CarboLifeUI;component/Resources/rbn_groupnew32.png"/>
+
+                    <RibbonMenuButton Label="Delete Group" PreviewMouseDown="Mnu_DeleteGroup_Click" SmallImageSource="/CarboLifeUI;component/Resources/rbn_del.png" />
+                    <RibbonMenuButton Label="Merge Group" PreviewMouseDown="Mnu_MergeGroup_Click" SmallImageSource="/CarboLifeUI;component/Resources/rbn_groupmerge32.png"/>
+                    <RibbonMenuButton Label="Purge Elements" MouseDown="Mnu_PurgeElements_Click" SmallImageSource="/CarboLifeUI;component/Resources/rbn_grouppurge32.png"/>
+
+                    <RibbonMenuButton Label="Split Group..." PreviewMouseDown="RibbonMenuButton_PreviewMouseDown" Visibility="Visible" SmallImageSource="/CarboLifeUI;component/Resources/rbn_groupsplit32.png"/>
+                    <RibbonMenuButton Label="Multi-Map..." PreviewMouseDown="mnu_MapElements_Click" SmallImageSource="/CarboLifeUI;component/Resources/rbn_materialmap32.png"/>
+                    <!--- Needs a re-think -->
+
+                </RibbonGroup>
+                <!-- materials-->
+                <RibbonGroup x:Name="Materials" Header="Materials">
+                    <RibbonButton Label="Select" Click="Btn_Material_Click" LargeImageSource="/CarboLifeUI;component/Resources/rbn_materialselect32.png" />
+                    <RibbonButton Label="Editor" Click="btn_OpenMaterialEditor_Click" LargeImageSource="/CarboLifeUI;component/Resources/rbn_materialedit32.png" />
+                </RibbonGroup>
+
+                <RibbonGroup x:Name="Tools" Header="Tools">
+                    <RibbonButton Width="64" Height="64" Label="Manual RC" Click="Mnu_Reinforce_Click" LargeImageSource="/CarboLifeUI;component/Resources/rbn_rebar32.png"/>
+                    <RibbonButton Width="64" Height="64" Label="Auto RC" Click="Mnu_AutoRCGroups" LargeImageSource="/CarboLifeUI;component/Resources/rbn_rebar32.png"/>
+
+                    <RibbonButton Width="64" Height="64" Label="Profile" Click="Mnu_Metaldeck_Click" LargeImageSource="/CarboLifeUI;component/Resources/rbn_metaldeck32.png"/>
+                    <RibbonButton Width="64" Height="64" Label="Refresh" Click="Btn_Calculate_Click" LargeImageSource="/CarboLifeUI;component/Resources/rbn_refresh32.png" >
+                    </RibbonButton>
+                </RibbonGroup>
+
+                <RibbonGroup x:Name="Advanced" Header="Advanced">
+                    <RibbonButton Label="Advanced" Width="64" Height="64" Click="btn_EditAdvanced_Click" LargeImageSource="/CarboLifeUI;component/Resources/rbn_advanced32.png"/>
+                    <RibbonButton Label="B1-B7"  Width="64" Height="64" Click="btn_EditInUseValues_Click" LargeImageSource="/CarboLifeUI;component/Resources/rbn_Energy32.png"/>
+                </RibbonGroup>
+                <RibbonGroup x:Name="Table" Header="Table">
+                    <RibbonCheckBox Name="chx_AdvancedShow" Label="Show/Hide Advanced" ToolTip="Show/Hide advanced settings" Checked="Btn_ShowHideCorrections_Click" Unchecked="Btn_ShowHideCorrections_Click"></RibbonCheckBox>
+
+                    <RibbonComboBox Label="Sort by: " 
+                  SelectionBoxWidth="62"
+                  VerticalAlignment="Center" 
+                  IsEditable="True" DropDownClosed="ComboBox_DropDownClosed"
+                                    Name="cbb_SortValue">
+                        <RibbonGallery SelectedValue="Green"
+                          SelectedValuePath="Content"
+                          MaxColumnCount="1">
+                            <RibbonGalleryCategory>
+                                <RibbonGalleryItem Content="Material" Foreground="Black" />
+                                <RibbonGalleryItem Content="Category" Foreground="Black" />
+                            </RibbonGalleryCategory>
+                        </RibbonGallery>
+                    </RibbonComboBox>
+
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+
+        <DataGrid x:Name="dgv_Overview" Grid.Row="4" Grid.Column="1" 
+                              Margin="5,5,5,5" AutoGenerateColumns="False" ItemsSource="{Binding}" IsReadOnly="False" SelectionChanged="Dgv_Overview_SelectionChanged" 
+                  CanUserDeleteRows="False" CanUserAddRows="False" CanUserReorderColumns="False" CanUserResizeRows="True" CanUserResizeColumns="True" CellEditEnding="Dgv_Overview_CellEditEnding" HorizontalScrollBarVisibility="Visible"  >
+            <DataGrid.Resources>
+                <local:SumValues x:Key="SumValues"/>
+            </DataGrid.Resources>
+
+
+            <DataGrid.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.ContainerStyle>
+                        <Style TargetType="{x:Type GroupItem}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type GroupItem}">
+                                        <Expander IsExpanded="True" BorderThickness="1,1,1,1" Foreground="Black" Background="#ffe3dd" BorderBrush="#ffd8cf">
+                                            <Expander.Header>
+                                                <DockPanel Width="800"  >
+                                                    <TextBlock FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" Text="{Binding Path=Name}" Margin="5,0,0,0"/>
+                                                    <TextBlock FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" Text="{Binding Path=ItemCount}" Visibility="Hidden"/>
+                                                    <TextBlock FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" Margin="50,0,20,0"  Text="{Binding StringFormat=Total: {0}, Converter={StaticResource SumValues}, ConverterParameter=EC}" Visibility="Visible"/>
+                                                </DockPanel>
+                                            </Expander.Header>
+                                            <Expander.Content>
+                                                <ItemsPresenter />
+                                            </Expander.Content>
+                                        </Expander>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                                <!--Experimental-->
+                            </Setter>
+                        </Style>
+                    </GroupStyle.ContainerStyle>
+                </GroupStyle>
+            </DataGrid.GroupStyle>
+
+
+
+            <DataGrid.Columns>
+                <!--ID-->
+                <DataGridTextColumn MinWidth="50" Header="Id" Binding="{Binding Path=Id}" IsReadOnly="True" Visibility="Hidden"/>
+                <!--Category-->
+                <DataGridTextColumn Width="1*" MinWidth="150" Header="Category &#x0a; " Binding="{Binding Path=Category, Mode=TwoWay}" IsReadOnly="False"/>
+                <!--Material-->
+                <DataGridTextColumn MinWidth="250" Header="Material &#x0a;" Binding="{Binding Path=MaterialName}" IsReadOnly="True" Visibility="Visible" Foreground="#000" FontWeight="DemiBold"/>
+                <!---Description-->
+                <DataGridTextColumn Width="1*" MinWidth="100" Header="Description &#x0a;" Binding="{Binding Path=Description, Mode=TwoWay}" IsReadOnly="False"/>
+                <!--Volume-->
+                <DataGridTextColumn MinWidth="100" Header="Volume &#x0a;[m³]" Binding="{Binding Path=Volume, Mode=TwoWay}" IsReadOnly="False" Visibility="Visible"/>
+
+                <!--- Advanced Fields -->
+                <!--Volume Correction -->
+                <DataGridTextColumn x:Name="column_Correction" MinWidth="100" Header="Correction &#x0a;[+-*/ Function] " Binding="{Binding Path=Correction, Mode=TwoWay}" IsReadOnly="False" Visibility="Hidden"/>
+                <!--Waste Correction -->
+                <DataGridTextColumn x:Name="column_Waste" MinWidth="100" Header="Waste  &#x0a; [%] " Binding="{Binding Path=Waste, Mode=TwoWay}" IsReadOnly="False" Visibility="Hidden"/>
+                <!--Additional Correction -->
+                <DataGridTextColumn x:Name="column_Addition" MinWidth="100" Header="Additional &#x0a;[kgCO₂e/kg] " Binding="{Binding Path=Additional, Mode=TwoWay}" IsReadOnly="False" Visibility="Hidden"/>
+                <!--Additional Correction -->
+                <DataGridTextColumn x:Name="column_B4" MinWidth="100" Header="Group [B4] &#x0a;[x build] " Binding="{Binding Path=inUseProperties.B4, Mode=TwoWay}" IsReadOnly="True" Visibility="Hidden"/>
+                <DataGridTextColumn x:Name="column_B1B7ECI" MinWidth="100" Header="Group [B1-B7] &#x0a;[kgCO₂e/kg] " Binding="{Binding Path=inUseProperties.totalECI, Mode=TwoWay}" IsReadOnly="True" Visibility="Hidden"/>
+
+                <!--Total Volume-->
+                <!--<DataGridTextColumn x:Name="column_Volume"  MinWidth="100" Header="Total Volume &#x0a;[m³]" Binding="{Binding Path=TotalVolume, Mode=OneWay}" IsReadOnly="True" Visibility="Hidden"/>
+-->
+                <!--Total Volume 2-->
+                <DataGridTemplateColumn x:Name="column_Volume" Header="Total Volume &#x0a;[m³]" MinWidth="100" Width="1*" IsReadOnly="True"  Visibility="Visible">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=TotalVolume, Mode=OneWay, UpdateSourceTrigger=LostFocus}" Loaded="RoundValue" Background="LightGray"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+                <!--END ANDVANCED OPTIONS-->
+                <!--Density-->
+                <DataGridTemplateColumn Header="Density &#x0a;[kg/m³]" Width="1*" MinWidth="80"  IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=Density, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"  Loaded="RoundValue" Background="LightGray"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!--Mass-->
+                <DataGridTemplateColumn Header="Mass &#x0a;[kg]" MinWidth="90" Width="1*" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=Mass, Mode=OneWay, UpdateSourceTrigger=LostFocus}"  Loaded="RoundValue" Background="LightGray"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!--CO₂e Intensity-->
+                <DataGridTemplateColumn Header="CO₂e Intensity &#x0a;[kgCO₂e/kg]" Width="100" MinWidth="100"  IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=ECI, Mode=OneWay, UpdateSourceTrigger=LostFocus}"  Loaded="RoundValue" Background="LightGray"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!--CO₂e Total-->
+                <DataGridTemplateColumn Header="Total &#x0a;[tCO₂e]" Width="100" MinWidth="100"  IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=EC, Mode=OneWay, UpdateSourceTrigger=LostFocus}"  Loaded="RoundValue" Background="LightGray" FontWeight="DemiBold"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!--%-->
+
+                <DataGridTemplateColumn Header="% &#x0a;" Width="5*" MinWidth="100" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <ProgressBar Value="{Binding Path=PerCent, Mode=OneWay}" Minimum="0" Maximum="100" Background="LightGray" />
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=PerCent}" Loaded="PercentValue"/>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Name="lbl_Total" Grid.Row="5" Grid.Column="1" Background="Transparent">TOTAL: xxx tCO₂e (Recalculate to refresh)</Label>
+
+
+        <Menu Grid.Row="6" Grid.Column="1" Background="Transparent" >
+            <Button x:Name="btn_Collaps" Width="35" Content="▼" HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="0,0,0,0" Style="{StaticResource ButtonStyle}" Click="Btn_Collaps_Click"/>
+            <MenuItem Name="mnu_EditElements" Header="Elements" Background="Transparent" Style="{StaticResource baseStyleLabel}" >
+                <MenuItem Name="mnu_MoveToNewGroup" Header="_To New Group" Click="Mnu_MoveToNewGroup_Click"/>
+                <MenuItem Name="mnu_CreateMaterialFromElement" Header="_Create Material From Element" Click="mnu_CreateMaterialFromElement_Click"/>
+
+            </MenuItem>
+        </Menu>
+
+        <DataGrid x:Name="dgv_Elements" Grid.Row="7" Grid.Column="1" Margin="5,5,5,5" CanUserAddRows="False" IsReadOnly="False" Visibility="Visible" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn MinWidth="25" Header="Id" Binding="{Binding Path=Id}" IsReadOnly="True" Visibility="Visible"/>
+                
+                <DataGridCheckBoxColumn MinWidth="100" Header="Include" Binding="{Binding Path=includeInCalc}" IsReadOnly="False"/>
+                <DataGridCheckBoxColumn MinWidth="100" Header="Substructure" Binding="{Binding Path=isSubstructure}" IsReadOnly="False"/>
+
+                <DataGridTextColumn Width="1*" MinWidth="100" Header="Category" Binding="{Binding Path=Category, Mode=TwoWay}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="1*" MinWidth="100" Header="Name" Binding="{Binding Path=Name}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="1*" MinWidth="100" Header="MaterialName" Binding="{Binding Path=MaterialName, Mode=TwoWay}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="1*" MinWidth="100" Header="CarboMaterialName" Binding="{Binding Path=CarboMaterialName, Mode=TwoWay}" IsReadOnly="True"/>
+
+                <DataGridTextColumn MinWidth="50" Header="Level" Binding="{Binding Path=LevelName}" IsReadOnly="True"/>
+
+                <DataGridTextColumn MinWidth="90" Header="Volume (m³)" Binding="{Binding Path=Volume, Mode=TwoWay}" IsReadOnly="True" Visibility="Visible"/>
+                <DataGridTextColumn MinWidth="90" Header="Volume_Total (m³)" Binding="{Binding Path=Volume_Total, Mode=TwoWay}" IsReadOnly="True" Visibility="Visible"/>
+
+                <DataGridTextColumn Width="1*" MinWidth="100" Header="Density (kg/m³)" Binding="{Binding Path=Density}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="1*" MinWidth="90" Header="Mass(kg)" Binding="{Binding Path=Mass}" IsReadOnly="True"/>
+
+                <DataGridTextColumn MinWidth="100" Header="ECI(kgCO₂e/kg)" Binding="{Binding Path=ECI}" IsReadOnly="True"/>
+                <DataGridTextColumn MinWidth="100" Header="ECI_Total(kgCO₂e/kg)" Binding="{Binding Path=ECI_Total}" IsReadOnly="True"/>
+
+                <DataGridTextColumn MinWidth="100" Header="EC (tCO₂e)" Binding="{Binding Path=EC}" IsReadOnly="True"/>
+                <DataGridTextColumn MinWidth="100" Header="EC_Total (tCO₂e)" Binding="{Binding Path=EC_Total}" IsReadOnly="True"/>
+
+                <DataGridCheckBoxColumn MinWidth="100" Header="isDemolished" Binding="{Binding Path=isDemolished}" IsReadOnly="True"/>
+                <DataGridCheckBoxColumn MinWidth="100" Header="isExisting" Binding="{Binding Path=isExisting}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="50" MinWidth="100" Header="Additional" Binding="{Binding Path=AdditionalData, Mode=TwoWay}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="50" MinWidth="100" Header="EC Cumulative" Binding="{Binding Path=EC_Cumulative, Mode=TwoWay}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="50" MinWidth="100" Header="Volume Cumulative" Binding="{Binding Path=Volume_Cumulative, Mode=TwoWay}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="50" MinWidth="100" Header="Area (m²)" Binding="{Binding Path=Area, Mode=TwoWay}" IsReadOnly="True"/>
+                
+                <DataGridTextColumn MinWidth="50" Header="Grade" Binding="{Binding Path=Grade}" IsReadOnly="True"/>
+                <DataGridTextColumn MinWidth="50" Header="Elevation" Binding="{Binding Path=Level}" IsReadOnly="True"/>
+
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </Grid>
+</UserControl>

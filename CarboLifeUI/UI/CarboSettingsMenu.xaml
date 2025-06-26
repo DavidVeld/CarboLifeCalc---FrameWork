@@ -1,0 +1,77 @@
+﻿<Window x:Class="CarboLifeUI.UI.CarboSettingsMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CarboLifeUI.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="700" MinWidth="700" MinHeight="250" Width="700" Height="250" Background="WhiteSmoke" Title="Carbo life Calculator Settings"  Loaded="Window_Loaded">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="MyStyles.xaml">
+                </ResourceDictionary>
+                <ResourceDictionary Source="MyDataGrid.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="5"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource baseStyleTitle}">Carbo Life Calculator General Settings</Label>
+
+        <GroupBox Grid.Column="2" Margin="0,0,0,0" Grid.Row="2" Header="File Locations" Style="{StaticResource bigStyle}" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="32"/>
+                    <RowDefinition Height="32"/>
+                    <RowDefinition Height="32"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="1"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="1"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" Width="150" Height="28" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource bigStyle}" Grid.RowSpan="1">Templates Path:</Label>
+                <TextBox Name="txt_Path" Grid.Column="1" Grid.Row="1"  Margin="155,1,32,0" TextWrapping="Wrap"   VerticalAlignment="Top"  Height="27" Background="Transparent"  Style="{StaticResource flatTextBox}" Text="[Path]" IsEnabled="False"/>
+                <Button Name="btn_Browse" Grid.Row="1" Grid.Column="1" Margin="0,0,0,4" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="17" Height="25" Style="{StaticResource ButtonStyle}" Click="btn_Browse_Click">...</Button>
+
+                <Label Grid.Column="1" Margin="0,0,528,0" Grid.Row="2" Width="150"  Height="28" Grid.ColumnSpan="1" VerticalAlignment="Center" Style="{StaticResource formTextStyle}">Default Design Life:</Label>
+                <TextBox Name="txt_DesignLife" Grid.Column="1" Grid.Row="2" Margin="155,0,0,5" Width="110" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="25"  Style="{StaticResource flatTextBox}"></TextBox>
+
+                <Label Grid.Column="1" Margin="0,0,528,0" Grid.Row="3" Width="150"  Height="28" Grid.ColumnSpan="1" VerticalAlignment="Center" Style="{StaticResource formTextStyle}">Pop-up Removal Key:</Label>
+                <TextBox Name="txt_SecretMessage" Grid.Column="1" Grid.Row="3" Margin="155,0,0,5" Width="141" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="25"  Style="{StaticResource flatTextBox}"></TextBox>
+
+                <Button Name="btn_Check" Grid.Row="3" Grid.Column="1" Margin="315,0,0,0" Width="95" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Style="{StaticResource ButtonStyle}" Click="btn_Check_Click">Check Code</Button>
+                <Button Name="btn_Coffee" Grid.Row="3" Grid.Column="1" Margin="425,0,0,0" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Style="{StaticResource ButtonStyle}" Click="btn_Coffee_Click">Get Code</Button>
+
+
+                <Label Name="lbl_CheckTemplatePath" Visibility="Hidden" Grid.Column="1" Margin="0,25,0,0" Grid.Row="1" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource bigStyle}" Grid.RowSpan="1">[]</Label>
+
+            </Grid>
+        </GroupBox>
+
+        <Button Name="btn_Ok" Grid.Row="3" Grid.Column="2" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="70" Height="30" Style="{StaticResource ButtonStyle}" Click="btn_Ok_Click">Ok</Button>
+
+    </Grid>
+</Window>

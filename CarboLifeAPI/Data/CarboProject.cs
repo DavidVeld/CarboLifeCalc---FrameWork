@@ -694,6 +694,7 @@ namespace CarboLifeAPI.Data
                                         {
                                             //Only update if the mapping file suggest a change.
                                             gr.Material = cm;
+                                            gr.Waste = cm.WasteFactor;
                                             gr.RefreshValuesFromElements();
                                             gr.CalculateTotals();
                                             

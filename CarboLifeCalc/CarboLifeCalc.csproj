@@ -178,6 +178,7 @@
     <Content Include="data\A1A3Tables\User.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="data\defaultmappingfile.xml" />
     <Content Include="db\matchlog.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Xml.Serialization;
 
 namespace CarboLifeAPI.Data
@@ -23,6 +24,8 @@ namespace CarboLifeAPI.Data
 
         public void SaveToXml()
         {
+            CleanUp();
+
             string myPath = Utils.getAssemblyPath() + "\\data\\" + "defaultmappingfile.xml";
             bool okGo = true;
 
@@ -98,6 +101,17 @@ namespace CarboLifeAPI.Data
                     mappingTable.Add(newElement);
                 }
             }
+            CleanUp();
         }
+
+        private void CleanUp()
+        {
+            // Use LINQ to filter out duplicates based on revitName and category
+            mappingTable = mappingTable
+                .GroupBy(e => new { e.revitName, e.category })
+                .Select(g => g.First())
+                .ToList();
+        }
+
     }
 }

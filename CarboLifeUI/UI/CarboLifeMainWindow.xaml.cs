@@ -17,6 +17,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -402,10 +403,14 @@ Do you want to buy me a coffee and you get a key to remove this message?";
                 this.WindowState = WindowState.Maximized;
                 //this.WindowStyle = WindowStyle.None;
 
+
+
                 Bitmap Chart1 = null;
                 Bitmap Chart2 = null;
                 Bitmap LetiChart = null;
 
+                string base64CartesianChart1 = "";
+                string base64CartesianChart2 = "";
 
                 LiveCharts.Wpf.PieChart foundchart1 = Panel_Overview.pie_Chart1;
                 LiveCharts.Wpf.PieChart foundchart2 = Panel_Overview.pie_Chart2;
@@ -415,12 +420,20 @@ Do you want to buy me a coffee and you get a key to remove this message?";
                 if (foundchart1 != null)
                 {
                     Chart1 = ChartUtils.ControlToImage(foundchart1, 300, 300);
-                    //Chart1.Save(@"C:\Users\David\Documents\img1.jpg");
-                }
+                    if (Chart1 != null)
+                    {
+                        base64CartesianChart1 = ReportBuilder.ToBase64String(Chart1);
+                    }
 
-                if (foundchart2 != null)
+                    }
+
+                    if (foundchart2 != null)
                 {
                     Chart2 = ChartUtils.ControlToImage(foundchart2, 300, 300);
+                    if (Chart2 != null)
+                    {
+                        base64CartesianChart2 = ReportBuilder.ToBase64String(Chart2);
+                    }
                 }
 
                 if (foundletiChart != null)
@@ -429,7 +442,7 @@ Do you want to buy me a coffee and you get a key to remove this message?";
                 }
 
 
-                ReportBuilder.CreateReport(carboLifeProject, Chart1, Chart2, LetiChart);
+                ReportBuilder.CreateReport(carboLifeProject, base64CartesianChart1, base64CartesianChart2, LetiChart);
             }
         }
 

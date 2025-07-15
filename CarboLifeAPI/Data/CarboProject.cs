@@ -51,6 +51,13 @@ namespace CarboLifeAPI.Data
         /// A0 global in kgCo2
         /// </summary>
         public double A0Global { get; set; }
+        public double A0GlobalUncert
+        {
+            get
+            {
+                return (A0Global * (1 + UncertFact));
+            }
+        }
 
 
         /// <summary>
@@ -117,6 +124,11 @@ namespace CarboLifeAPI.Data
         {
             get {return groupList;}
         }
+
+        /// <summary>
+        /// Uncertanty Factor, this is used to calculate the uncertainty of the project, it is a factor that is multiplied with the total EC value per element. Range = 0 - 1;
+        /// </summary>
+        public double UncertFact { get; set; }
 
 
         //System field
@@ -1651,41 +1663,6 @@ namespace CarboLifeAPI.Data
             return elementbuffer;
         }
        
-        /*
-        public void GenerateDummyList()
-        {
-            //Create a large list of dummy elements;
-            elementList = new ObservableCollection<CarboElement>();
-
-            Random rnd = new Random(1000);
-
-            for (int i = 0; i<100; i++)
-            {
-                double volume = rnd.Next(10, 100);  // creates a random Volume
-                int value1 = rnd.Next(1, 5);  // creates a random Volume
-                int value2 = rnd.Next(1, 5);  // creates a random Volume
-
-                string materialName = CarboElementImporter.getRandomMaterial(value1);
-                string category = CarboElementImporter.getRandomCategory(value2);
-                int id = rnd.Next(10000, 20000);
-
-                CarboElement carboLifeElement = new CarboElement();
-
-                carboLifeElement.Id = id;
-                carboLifeElement.MaterialName = materialName;
-                carboLifeElement.Volume = volume;
-                carboLifeElement.Category = category;
-                carboLifeElement.SubCategory = "";
-                carboLifeElement.Density = 1000;
-                //carboLifeElement.Material = new CarboMaterial(materialName);
-
-                elementList.Add(carboLifeElement);
-            }
-
-            CalculateProject();
-        }
-        */
-
         public void Audit()
         {
             //Check if all groups have unique Id;
@@ -2124,6 +2101,7 @@ namespace CarboLifeAPI.Data
             if(newRCGroups.Count > 0)
             {
                 AddGroups(newRCGroups);
+
             }
 
 

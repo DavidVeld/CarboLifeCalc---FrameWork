@@ -25,6 +25,8 @@ namespace CarboCroc
         {
             pManager.AddGenericParameter("Carbo Elements", "CE", "Carbo Elements", GH_ParamAccess.list);
             pManager.AddBooleanParameter("Switches", "CS", "Carbo Switches", GH_ParamAccess.list);
+            pManager.AddTextParameter("TemplatePath", "TP", "Template Path", GH_ParamAccess.item, "");
+            pManager.AddNumberParameter("Uncertainty", "U", "Uncertainty factor", GH_ParamAccess.item, 0);
 
         }
 

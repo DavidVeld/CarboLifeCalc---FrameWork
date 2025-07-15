@@ -26,6 +26,8 @@ namespace CarboCroc
         {
             pManager.AddGenericParameter("Carbo Groups", "CG", "Carbo Groups", GH_ParamAccess.list);
             pManager.AddBooleanParameter("Switches", "CS", "Carbo Switches", GH_ParamAccess.list);
+            pManager.AddTextParameter("TemplatePath", "TP", "Template Path", GH_ParamAccess.item,"");
+            pManager.AddNumberParameter("Uncertainty", "U", "Uncertainty factor", GH_ParamAccess.item, 0);
 
         }
 
@@ -45,10 +47,15 @@ namespace CarboCroc
             var provided_as_goo = new List<GH_ObjectWrapper>();
             List<CarboGroup> listOfGroups = new List<CarboGroup>();
 
+            string templatePath = "";
+            bool oktemplatePath = DA.GetData(2, ref templatePath);
+            double uncertainty = 0;
+            bool okUncertainty = DA.GetData(3, ref uncertainty);
+
             CarboProject runtimeProject = new CarboProject();
+            runtimeProject.UncertFact = uncertainty;
 
             List<bool> switches = new List<bool>(); ;
-
             //Get the save as.. path :
             //DA.GetData<string>(1, ref path);
 

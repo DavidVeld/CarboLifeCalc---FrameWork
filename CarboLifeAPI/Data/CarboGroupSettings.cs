@@ -53,7 +53,7 @@ namespace CarboLifeAPI.Data
         public List<CarboNumProperty> rcQuantityMap { get; set; }
         public string RCMaterialCategory { get; set; }
         public bool UseImportedMap { get; set; }
-
+        public double UncertaintyFactor { get; set; }
 
         public CarboGroupSettings()
         {
@@ -88,6 +88,8 @@ namespace CarboLifeAPI.Data
             RCMaterialName = "Reinforcement";
 
             UseImportedMap = true;
+
+            UncertaintyFactor = 0.10;
 
 
             rcQuantityMap = new List<CarboNumProperty>();

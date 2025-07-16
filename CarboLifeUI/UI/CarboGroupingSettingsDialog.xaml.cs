@@ -142,6 +142,9 @@ namespace CarboLifeUI.UI
 
             chk_UseMappedMaterialData.IsChecked = importSettings.UseImportedMap;
 
+            txt_UncertFact.Text = (importSettings.UncertaintyFactor * 100).ToString();
+
+
         }
 
         private void Btn_Cancel_Click(object sender, RoutedEventArgs e)
@@ -221,6 +224,9 @@ namespace CarboLifeUI.UI
 
             settings.defaultCarboGroupSettings.UseImportedMap = chk_UseMappedMaterialData.IsChecked.Value;
 
+            settings.defaultCarboGroupSettings.UncertaintyFactor = Convert.ToDouble(txt_UncertFact.Text) / 100.0;
+
+
             //Seve as default for next time/project;
             settings.Save();
 
@@ -270,11 +276,6 @@ namespace CarboLifeUI.UI
 
                 importSettings.rcQuantityMap = rcMapper.rcMap;
             }
-
-
         }
-
-
-
     }
 }

@@ -405,7 +405,7 @@ namespace CarboLifeAPI.Data
                 PerCent = 0;
             }
         }
-        public void CalculateTotals(bool cA13 = true, bool cA4 = true, bool cA5 = true, bool cB = true, bool cC = true, bool cD = true, bool cSeq = true, bool cAdd = true, bool calcSubstructrue = true)
+        public void CalculateTotals(bool cA13 = true, bool cA4 = true, bool cA5 = true, bool cB = true, bool cC = true, bool cD = true, bool cSeq = true, bool cAdd = true, bool calcSubstructrue = true, double uncertFact = 0)
         {
             //Recalculate The materials
             Material.CalculateTotals();
@@ -414,6 +414,10 @@ namespace CarboLifeAPI.Data
             //EEI = Material.EEI;
             double totalECI = 0;
             totalECI += Additional;
+
+            double uncertaintyFactor = 1 + uncertFact;
+            if (uncertaintyFactor < 1)
+                uncertaintyFactor = 1;
 
             //Calculate the total ECI for each group, using only the parameters that are set
             if (cA13 == true)
@@ -513,8 +517,11 @@ namespace CarboLifeAPI.Data
 
             }
 
+            //Adjust Volume to uncertainty
+            TotalVolume = TotalVolume * uncertaintyFactor;
+
             //Use Correct ECi to write into Elements based on Chosen switches (A-D)
-            if(this.AllElements.Count > 0)
+            if (this.AllElements.Count > 0)
             {
                 foreach(CarboElement el in  this.AllElements)
                 {

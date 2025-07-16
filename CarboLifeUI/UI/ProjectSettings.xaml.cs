@@ -119,27 +119,6 @@ namespace CarboLifeUI.UI
                     txt_Area.Text = CarboLifeProject.Area.ToString();
                     txt_AreaNew.Text = CarboLifeProject.AreaNew.ToString();
 
-                    /*
-                    if (CarboLifeProject.totalAreaIsNew == true)
-                    {
-                        //these two need to be equal if above is true;
-                        CarboLifeProject.AreaNew = CarboLifeProject.Area;
-                        txt_AreaNew.IsEnabled = false;
-                        txt_AreaNew.Foreground = new SolidColorBrush(Colors.DarkGray);
-                    }
-                    else
-                    {
-                        txt_AreaNew.IsEnabled = true;
-                        txt_AreaNew.Foreground = new SolidColorBrush(Colors.Black);
-
-                    }
-                    */
-
-
-
-
-
-
 
                     txt_DesignLife.Text = CarboLifeProject.designLife.ToString();
                     
@@ -157,14 +136,16 @@ namespace CarboLifeUI.UI
                     txt_EnergyPerYear.Text = CarboLifeProject.energyProperties.value.ToString();
 
                     //Totals
-                    txt_A0Total.Text = ((CarboLifeProject.A0Global) / 1000).ToString();
+                    txt_A0Total.Text = ((CarboLifeProject.A0GlobalUncert) / 1000).ToString();
                     txt_A5Total.Text = CarboLifeProject.A5Global.ToString();
                     txt_EnergyTotal.Text = (CarboLifeProject.energyProperties.value / 1000).ToString();
                     txt_C1Total.Text = CarboLifeProject.C1Global.ToString();
 
                     lbl_Currency.Content = CarboLifeProject.valueUnit.ToString();
                     lbl_Currencyunit.Content = "kgCO₂e/" + CarboLifeProject.valueUnit.ToString();
-                   
+
+                    double valueInPercent = (CarboLifeProject.UncertFact * 100);
+                    txt_Uncert.Text = valueInPercent.ToString();
 
                 }
             }
@@ -442,6 +423,14 @@ namespace CarboLifeUI.UI
             RefreshInterFace();
         }
 
+        private async void txt_Uncert_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
 
+            await Task.Delay(1000);
+            double fact = Utils.ConvertMeToDouble(tb.Text) / 100;
+            CarboLifeProject.UncertFact = fact;
+            RefreshInterFace();
+        }
     }
 }

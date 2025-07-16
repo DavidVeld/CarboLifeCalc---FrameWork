@@ -232,6 +232,9 @@ namespace CarboLifeAPI.Data
             designLife = settings.defaultDesignLife;
 
             calculateSubStructure = true;
+
+            UncertFact = RevitImportSettings.UncertaintyFactor;
+
         }
 
 
@@ -314,7 +317,9 @@ namespace CarboLifeAPI.Data
             designLife = settings.defaultDesignLife;
 
             calculateSubStructure = true;
-            
+
+            UncertFact = RevitImportSettings.UncertaintyFactor;
+
         }
 
         /// <summary>
@@ -883,7 +888,7 @@ namespace CarboLifeAPI.Data
 
                 //These are global calculated values through settings
 
-                CarboDataPoint cb_A0 = new CarboDataPoint("A0(Global)", this.A0Global);
+                CarboDataPoint cb_A0 = new CarboDataPoint("A0(Global)", this.A0GlobalUncert);
                 CarboDataPoint cb_A5Global = new CarboDataPoint("A5(Global)", this.A5Global * 1000);
                 CarboDataPoint cb_C1Global = new CarboDataPoint("C1(Global)", this.C1Global * 1000);
                 CarboDataPoint cb_B67D2 = new CarboDataPoint("Energy B6-B7 + D2 (Global)", this.energyProperties.value);
@@ -1030,7 +1035,7 @@ namespace CarboLifeAPI.Data
             double totalB6B7 = 0;
 
             if(calculateA0 == true)
-                totalA0 = this.A0Global / 1000;
+                totalA0 = this.A0GlobalUncert / 1000;
 
             if (calculateA5 == true)
                 totalA5 = A5Global;
@@ -1293,6 +1298,11 @@ namespace CarboLifeAPI.Data
 
             string generalText = "";
 
+
+                generalText += "The calulated values are based on a uncertainty factor of: " + Math.Round((UncertFact * 100), 0).ToString("N") + " %" + Environment.NewLine;
+            
+
+
             generalText += "The Upfront Carbon Footprint (A0-A5) is: " + Math.Round((getUpfrontTotals() / 1000),2).ToString("N") + " tCO₂e" + Environment.NewLine;
             generalText += "The Embodied Carbon Footprint (A0-C & Seq) is: " + Math.Round((getEmbodiedTotals() / 1000), 2).ToString("N") + " tCO₂e" + Environment.NewLine;
             generalText += Environment.NewLine;
@@ -1318,10 +1328,13 @@ namespace CarboLifeAPI.Data
             ECTotal = 0;
             double globalTotals = 0;
 
+            double uncertaintyFactor = 1 + UncertFact;
+
+
             //This Will calculate all totals of MATERIAL SPECIFIC VALUES and set all the individual element values;
             foreach (CarboGroup cg in groupList)
             {
-                cg.CalculateTotals(calculateA13, calculateA4, calculateA5, calculateB, calculateC, calculateD, calculateSeq, calculateAdd, calculateSubStructure);
+                cg.CalculateTotals(calculateA13, calculateA4, calculateA5, calculateB, calculateC, calculateD, calculateSeq, calculateAdd, calculateSubStructure, uncertaintyFactor);
                 //EE += cg.EE;
                 EC += cg.EC;
             }
@@ -1339,13 +1352,13 @@ namespace CarboLifeAPI.Data
             //Set Global Values if required
 
             if (calculateA0 == true)
-                globalTotals += A0Global / 1000;
+                globalTotals += A0GlobalUncert / 1000;
             else { }
             //Ignore
 
             if (calculateA5 == true)
             {
-                this.A5Global = (A5Factor * (Value / 100000)) / 1000;
+                this.A5Global = ((A5Factor * (Value / 100000)) / 1000) * uncertaintyFactor;
                 globalTotals += this.A5Global;
             
             }
@@ -1354,7 +1367,7 @@ namespace CarboLifeAPI.Data
 
             if (calculateC == true)
             {
-                this.C1Global = (demoArea * C1Factor) / 1000;
+                this.C1Global = ((demoArea * C1Factor) / 1000) * uncertaintyFactor;
                 globalTotals += this.C1Global;
             }
             else { }
@@ -1363,7 +1376,7 @@ namespace CarboLifeAPI.Data
             if (calculateB67 == true)
             {
                 energyProperties.calculate(this.designLife);
-                this.b675Global = (energyProperties.value / 1000);
+                this.b675Global = ((energyProperties.value / 1000)) * uncertaintyFactor;
                 globalTotals += this.b675Global;
 
             }
@@ -1438,7 +1451,7 @@ namespace CarboLifeAPI.Data
             //Set Global Values if required
 
             if (cA0 == true)
-                globalTotals += A0Global;
+                globalTotals += A0GlobalUncert;
             else { }
             //Ignore
 

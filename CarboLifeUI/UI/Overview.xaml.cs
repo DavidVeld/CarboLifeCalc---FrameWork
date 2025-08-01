@@ -60,12 +60,7 @@ namespace CarboLifeUI.UI
                 if (mainViewer != null)
                     CarboLifeProject = mainViewer.getCarbonLifeProject();
 
-                if (CarboLifeProject != null)
-                {
-                    //A project Is loaded, Proceed to next
 
-                    RefreshInterFace();
-                }
 
                 //CategoryList:
                 if (cbb_BuildingType.Items.Count == 0)
@@ -99,6 +94,13 @@ namespace CarboLifeUI.UI
                 cbb_BuildingType.SelectedItem = CarboLifeProject.Category;
                 txt_Area.Text = CarboLifeProject.Area.ToString();
                 txt_AreaNew.Text = CarboLifeProject.AreaNew.ToString();
+
+                if (CarboLifeProject != null)
+                {
+                    //A project Is loaded, Proceed to next
+
+                    RefreshInterFace();
+                }
             }
             catch (Exception ex)
             {

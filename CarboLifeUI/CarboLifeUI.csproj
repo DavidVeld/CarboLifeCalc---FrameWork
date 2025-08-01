@@ -102,6 +102,7 @@
     <Compile Include="UI\MaterialConcreteMapper.xaml.cs">
       <DependentUpon>MaterialConcreteMapper.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\TargetIndicator.cs" />
     <Compile Include="UI\TemplateSelector.xaml.cs">
       <DependentUpon>TemplateSelector.xaml</DependentUpon>
     </Compile>

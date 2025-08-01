@@ -74,7 +74,7 @@ namespace CarboLifeUI.UI
 
                     IList<LetiScore> letiList = new List<LetiScore>();
 
-                    letiList = ScorsIndicator.getLetiList();
+                    letiList = TargetIndicator.getLetiList();
                     IList<string> typelist = letiList.Select(x => x.BuildingType).Distinct().ToList();
 
                     foreach (string name in typelist)
@@ -276,7 +276,7 @@ namespace CarboLifeUI.UI
                 double resultPointsA1C = CarboLifeProject.getEmbodiedTotals();
 
 
-                IEnumerable<UIElement> letiGraph = ScorsIndicator.generateImage(cnv_Leti, resultPointsA1A5, resultPointsA1C, area, cbb_BuildingType.Text);
+                IEnumerable<UIElement> letiGraph = TargetIndicator.generateImage(cnv_Leti, resultPointsA1A5, resultPointsA1C, area, cbb_BuildingType.Text);
                 foreach (UIElement uielement in letiGraph)
                 {
                     cnv_Leti.Children.Add(uielement);

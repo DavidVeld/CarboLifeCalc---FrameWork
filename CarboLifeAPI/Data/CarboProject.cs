@@ -196,7 +196,7 @@ namespace CarboLifeAPI.Data
 
             Name = "New Project";
             Number = "000000";
-            Category = "Structure";
+            Category = "IstructE Structure";
             Description = "New Project";
             valueUnit = "£";
             Area = 1;
@@ -595,36 +595,6 @@ namespace CarboLifeAPI.Data
 
             return result;
 
-        }
-
-        [Obsolete]
-        private bool updateinElementList(CarboElement ceNew)
-        {
-            bool result = false;
-            //check all existing elements for its 
-            foreach (CarboElement ceOld in elementList)
-            {
-                bool isSimilar = isElementSimilar(ceOld, ceNew);
-                if (ceOld.Id == ceNew.Id && ceOld.MaterialName == ceNew.MaterialName && ceOld.isUpdated == false)
-                {
-                    //A match was found, update the element
-
-                        //These two match, we can update the volume
-                        ceOld.Volume = ceNew.Volume;
-                        ceOld.Volume_Total = 0;
-                        //not sure about the below:
-                        ceOld.Category = ceNew.Category;
-                        ceOld.Category = ceNew.SubCategory;
-
-                        //Set Flags
-                        ceOld.isUpdated = true;
-                    justSaved = false;
-
-                    return true;
-                }
-            }
-            //element is not found 
-            return result;
         }
 
         private bool updateinGroups(CarboElement ceNew)
@@ -1063,61 +1033,6 @@ namespace CarboLifeAPI.Data
 
             return result;
         }
-        [Obsolete("This is the old version and can be deleted")]
-
-        public string getSummaryText(bool materials, bool globals, bool cars, bool trees)
-        {
-            string result = "";
-
-            double totalMaterials = getTotalsGroup().EC;
-            double globalA5 = A5Global;
-            double globalC1 = C1Global;
-            double totalTotal = totalMaterials + globalA5 + globalC1;
-
-            if (materials == true)
-                result += "Total material specific: " + Math.Round(totalMaterials, 2) + " tCO₂e " + Environment.NewLine;
-            if (globals == true)
-                result += "Total global project specific (A5): " + Math.Round(globalA5, 2) + " tCO₂e" + Environment.NewLine;
-            
-            if(globalA5 == 0)
-                result += "(No project values to calculate A5 emissions )" + Environment.NewLine;
-            //C1
-            if (globalC1 == 0)
-                result += "(No demolition estimation in project )" + Environment.NewLine;
-            else
-            {
-                //result += "Total, global demolition value (C1): " + Math.Round(demoArea, 2) + " m² x " +  Math.Round(C1Factor, 2) + " kgCO₂e/m² / 1000 = " + Math.Round(globalC1, 2) + " tCO₂e"  + Environment.NewLine;
-                result += "Total global demolition value (C1): " + Math.Round(globalC1, 2) + " tCO₂e" + Environment.NewLine;
-
-            }
-            result += Environment.NewLine;
-            //Totals:
-            result += "Total CO₂e = " + "Total materials" + " + A5 Global " + " + C1 Global " + Environment.NewLine;
-
-            result += "Total CO₂e = " + Math.Round(totalMaterials, 2) + " + " + Math.Round(globalA5, 2) + " + " + Math.Round(globalC1, 2) + Environment.NewLine;
-
-
-            result += "Total CO₂e = " + Math.Round(totalTotal, 2) + " tCO₂e (Metric tons of carbon dioxide equivalent)" + Environment.NewLine + Environment.NewLine;
-            if (Area > 0)
-            {
-                result += "OR " + Math.Round(totalTotal / Area, 3) + " tCO₂e/m² (Metric tons of carbon dioxide equivalent per square meter)" + Environment.NewLine;
-            }
-
-            result += Environment.NewLine;
-
-            if (materials == true)
-                result += "This equals to: " + Math.Round(totalTotal / 1.40, 2) + " average car emission per year (1.40 tCO₂e/car). (UK)" + Environment.NewLine;
-            
-            if (trees == true)
-                result += "This requires " + Math.Round((totalTotal / 180) * 4440, 0) + " Trees (Spruce or Fir) to grow for at least 30 years" + Environment.NewLine;
-
-            double socialcost = (totalTotal * SocialCost);
-
-            result += "The Social Carbon Costs are: " + Math.Round(socialcost, 2) + " $/£/€ total" + Environment.NewLine + Environment.NewLine;
-
-
-            return result;
-        }
 
         //This will attempt to create a calc for summary: 
         /// <summary>
@@ -1334,7 +1249,7 @@ namespace CarboLifeAPI.Data
             //This Will calculate all totals of MATERIAL SPECIFIC VALUES and set all the individual element values;
             foreach (CarboGroup cg in groupList)
             {
-                cg.CalculateTotals(calculateA13, calculateA4, calculateA5, calculateB, calculateC, calculateD, calculateSeq, calculateAdd, calculateSubStructure, uncertaintyFactor);
+                cg.CalculateTotals(calculateA13, calculateA4, calculateA5, calculateB, calculateC, calculateD, calculateSeq, calculateAdd, calculateSubStructure, UncertFact);
                 //EE += cg.EE;
                 EC += cg.EC;
             }

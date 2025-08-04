@@ -760,7 +760,7 @@ namespace CarboLifeUI
                 labelText = "A+";
 
             bool metTarget = false;
-            if (scoreType.Target < value)
+            if (scoreType.Target > value)
                 metTarget = true;
             else
                 metTarget = false;
@@ -772,7 +772,7 @@ namespace CarboLifeUI
             label.FontStyle = FontStyles.Normal;
             label.FontWeight = FontWeights.Bold;
 
-            if(metTarget == true)
+            if (metTarget == true)
                 label.Foreground = Brushes.Green;
             else
                 label.Foreground = Brushes.Red;

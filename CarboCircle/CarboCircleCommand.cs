@@ -39,8 +39,9 @@ namespace CarboCircle
                 //CarboLifeApp.thisApp.ShowHeatmap(commandData.Application, projectToOpen, VisibleElements);
 
                 CarboCircleApp.thisApp.ShowCarboCircle(commandData.Application);
+                FormStatusChecker.isWindowOpen = false;
 
-                
+
                 //Return result
                 return Result.Succeeded;
             }

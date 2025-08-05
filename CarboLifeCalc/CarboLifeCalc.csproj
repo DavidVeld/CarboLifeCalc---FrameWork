@@ -178,6 +178,7 @@
     <Content Include="data\A1A3Tables\User.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="samples\CarboCircleTest R23.rvt" />
     <None Include="samples\CarboLifeCalc_sample_project_R23.rvt" />
     <Resource Include="data\defaultmappingfile.xml" />
     <Content Include="db\matchlog.txt">
@@ -330,9 +331,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="samples\Unit Test CLC R2023.rvt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="samples\CarboCircleTest R2023.rvt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="samples\existing_struct.gh">

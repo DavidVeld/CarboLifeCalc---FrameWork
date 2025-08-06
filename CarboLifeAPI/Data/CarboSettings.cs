@@ -22,12 +22,15 @@ namespace CarboLifeAPI.Data
         public string Currency { get; set; }
         public string ecRevitParameter { get; set; }
         public string secretMessage { get; set; }
-
         public string carboLegendName { get; set; }
         public string carboDashboardName { get; set; }
-
-
-        public List<CarboColourPreset> colourPresets {get; set;}
+        public bool showCars { get; set; }
+        public bool showPlanes { get; set; }
+        public bool showTrees { get; set; }
+        public bool showSCC { get; set; }
+        public bool showDeaths { get; set; }
+        public List<CarboColourPreset> colourPresets { get; set; }
+        public bool launchCircle { get; set; }
 
         public CarboGroupSettings defaultCarboGroupSettings;
         public CarboSettings()
@@ -43,9 +46,17 @@ namespace CarboLifeAPI.Data
             carboLegendName = "CLC_ResultsView";
             secretMessage = "";
 
+            showCars = true;
+            showPlanes = true;
+            showTrees = true;
+            showSCC = true;
+            showDeaths = false;
+
+            launchCircle = false;
+
             defaultCarboGroupSettings = new CarboGroupSettings();
 
-            if (colourPresets.Count>0)
+            if (colourPresets.Count > 0)
             {
                 CarboColourPreset preset = new CarboColourPreset();
                 colourPresets.Add(preset);

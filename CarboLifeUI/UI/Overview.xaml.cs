@@ -430,15 +430,13 @@ namespace CarboLifeUI.UI
             return ayResult;
         }
 
-        private void Pie_Chart_DataClick(object sender, LiveCharts.ChartPoint chartPoint)
-        {
-
-        }
 
         private void btn_EditDescription_Copy_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                refreshSumary();
+
                 string result = "";
 
                 result += "Total Embodied Carbon: " + CarboLifeProject.getTotalEC().ToString() + " tCO₂e" + Environment.NewLine;
@@ -492,6 +490,7 @@ namespace CarboLifeUI.UI
                         CarboLifeProject.Area = convertedText;
                         txt_Area.Text = convertedText.ToString();
                         RefreshLetiGraph();
+                        refreshSumary();
                     }
                 }
             }
@@ -517,6 +516,8 @@ namespace CarboLifeUI.UI
                         CarboLifeProject.AreaNew = convertedText;
                         txt_AreaNew.Text = convertedText.ToString();
                         RefreshLetiGraph();
+                        refreshSumary();
+
                     }
                 }
             }

@@ -44,6 +44,14 @@ namespace CarboLifeUI.UI
             txt_DesignLife.Text = settings.defaultDesignLife.ToString();
             txt_SecretMessage.Text = settings.secretMessage;
 
+            chx_Cars.IsChecked = settings.showCars;
+            chx_Trees.IsChecked = settings.showTrees;
+            chx_Plane.IsChecked = settings.showPlanes;
+            chx_SCC.IsChecked = settings.showSCC;
+            chx_Deaths.IsChecked = settings.showDeaths;
+
+            chx_Experimental.IsChecked = settings.launchCircle;
+
             CheckTemplateFile();
         }
 
@@ -52,6 +60,14 @@ namespace CarboLifeUI.UI
             isAccepted = true;
             settings.defaultDesignLife = Convert.ToInt16(Convert.ToDouble(txt_DesignLife.Text));
             settings.secretMessage = txt_SecretMessage.Text;
+
+            settings.showCars = chx_Cars.IsChecked.Value;
+            settings.showTrees = chx_Trees.IsChecked.Value;
+            settings.showPlanes = chx_Plane.IsChecked.Value;
+            settings.showSCC = chx_SCC.IsChecked.Value;
+            settings.showDeaths = chx_Deaths.IsChecked.Value;
+
+            settings.launchCircle = chx_Experimental.IsChecked.Value;
 
             settings.Save();
             this.Close();

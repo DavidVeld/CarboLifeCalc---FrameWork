@@ -7,15 +7,15 @@
     <ExistingPhaseName>Existing</ExistingPhaseName>
     <VolumeConversionFactor />
     <IncludeSubStructure>true</IncludeSubStructure>
-    <SubStructureParamType>Parameter (Instance Boolean)</SubStructureParamType>
-    <SubStructureParamName>CLC_IsSubstructure</SubStructureParamName>
+    <SubStructureParamType>Workset Name Contains</SubStructureParamType>
+    <SubStructureParamName>Substructure</SubStructureParamName>
     <IncludeDemo>false</IncludeDemo>
     <IncludeExisting>false</IncludeExisting>
     <CombineExistingAndDemo>false</CombineExistingAndDemo>
     <IncludeAdditionalParameter>false</IncludeAdditionalParameter>
     <AdditionalParameter>Additional</AdditionalParameter>
     <AdditionalParameterElementType>Type Parameter</AdditionalParameterElementType>
-    <IncludeGradeParameter>false</IncludeGradeParameter>
+    <IncludeGradeParameter>true</IncludeGradeParameter>
     <GradeParameterName>CLC_MaterialGrade</GradeParameterName>
     <GradeParameterType>Type Parameter</GradeParameterType>
     <IncludeCorrectionParameter>false</IncludeCorrectionParameter>
@@ -3908,9 +3908,9 @@ Recommended Value</Description>
     <WaterUsedPerYear>550</WaterUsedPerYear>
     <ElectricitygeneratedPerYear>0</ElectricitygeneratedPerYear>
     <propertyName>CarboEnergyProperties</propertyName>
-    <value>0</value>
-    <B6>0</B6>
-    <B7>0</B7>
+    <value>731</value>
+    <B6>702.44685730787876</B6>
+    <B7>28.975932863950014</B7>
     <D2>0</D2>
     <CO2CostPerkWh>0.2</CO2CostPerkWh>
     <CO2CostPerm3>0.0015</CO2CostPerm3>
@@ -3919,24 +3919,23 @@ Recommended Value</Description>
   </energyProperties>
   <Name>Sample House</Name>
   <Number>1234567</Number>
-  <Category>Structure</Category>
+  <Category>IstructE Structure</Category>
   <Description>New Project</Description>
   <SocialCost>150</SocialCost>
   <EE>0</EE>
   <EC>180.11974670430263</EC>
-  <Value>0</Value>
-  <Area>250</Area>
-  <AreaNew>250</AreaNew>
+  <Area>300</Area>
+  <AreaNew>300</AreaNew>
   <totalAreaIsNew>true</totalAreaIsNew>
   <A0Global>0</A0Global>
-  <A5Global>0</A5Global>
-  <A5Factor>1400</A5Factor>
+  <A5Global>6.6000000000000005</A5Global>
+  <A5AreaFactor>20</A5AreaFactor>
   <b675Global>0</b675Global>
   <B67Factor>0</B67Factor>
   <demoArea>0</demoArea>
-  <C1Factor>3.4</C1Factor>
+  <C1Factor>35</C1Factor>
   <C1Global>0</C1Global>
-  <ECTotal>180.11974670430263</ECTotal>
+  <ECTotal>186.71974670430262</ECTotal>
   <calculateA0>true</calculateA0>
   <calculateA13>true</calculateA13>
   <calculateA4>true</calculateA4>
@@ -4086,6 +4085,46 @@ Recommended Value</Description>
       <category>Structural Columns</category>
       <carboNAME>Steel Generic Open Sections</carboNAME>
     </CarboMapElement>
+    <CarboMapElement>
+      <revitName>WW_Concrete_Cast-in-Place Concrete</revitName>
+      <category>Floors</category>
+      <carboNAME>Concrete - Insitu</carboNAME>
+    </CarboMapElement>
+    <CarboMapElement>
+      <revitName>WW_Steel</revitName>
+      <category>Structural Framing</category>
+      <carboNAME>Steel Generic Open Sections</carboNAME>
+    </CarboMapElement>
+    <CarboMapElement>
+      <revitName>WW_Steel</revitName>
+      <category>Structural Columns</category>
+      <carboNAME>Steel Generic Open Sections</carboNAME>
+    </CarboMapElement>
+    <CarboMapElement>
+      <revitName>WW_Concrete_Cast-in-Place Concrete</revitName>
+      <category>Structural Foundations</category>
+      <carboNAME>Concrete - Insitu</carboNAME>
+    </CarboMapElement>
+    <CarboMapElement>
+      <revitName>WW_Concrete_ Precast Concrete</revitName>
+      <category>Walls</category>
+      <carboNAME>Concrete - Precast</carboNAME>
+    </CarboMapElement>
+    <CarboMapElement>
+      <revitName>WW_Concrete_Cast-in-Place Concrete</revitName>
+      <category>Walls</category>
+      <carboNAME>Concrete - Insitu</carboNAME>
+    </CarboMapElement>
+    <CarboMapElement>
+      <revitName>WW_Concrete_ Precast Concrete</revitName>
+      <category>Floors</category>
+      <carboNAME>Concrete - Precast</carboNAME>
+    </CarboMapElement>
+    <CarboMapElement>
+      <revitName>WW_Concrete_ Precast Concrete</revitName>
+      <category>Structural Foundations</category>
+      <carboNAME>Concrete - Precast</carboNAME>
+    </CarboMapElement>
   </carboMaterialMap>
   <carboLevelList />
   <getAllElements>
@@ -4115,7 +4154,7 @@ Recommended Value</Description>
       <EC_Cumulative>7500.3586113171605</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>17836a3c-e764-47fa-a2e0-08216444f621-0007882c</GUID>
@@ -4145,7 +4184,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>17836a3c-e764-47fa-a2e0-08216444f621-00078937</GUID>
@@ -4176,7 +4215,7 @@ Recommended Value</Description>
       <EC_Cumulative>11884.850201975398</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>17836a3c-e764-47fa-a2e0-08216444f621-00078ef8</GUID>
@@ -4207,7 +4246,7 @@ Recommended Value</Description>
       <EC_Cumulative>11884.850201975398</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>17836a3c-e764-47fa-a2e0-08216444f621-00078ef8</GUID>
@@ -4238,7 +4277,7 @@ Recommended Value</Description>
       <EC_Cumulative>11884.850201975398</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>17836a3c-e764-47fa-a2e0-08216444f621-00078ef8</GUID>
@@ -4269,7 +4308,7 @@ Recommended Value</Description>
       <EC_Cumulative>59.230870919999994</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d13f</GUID>
@@ -4279,25 +4318,24 @@ Recommended Value</Description>
       <Id>512321</Id>
       <Name>600mm Diameter</Name>
       <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
-      <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
       <MaterialCategoryName>Concrete</MaterialCategoryName>
-      <Grade>C32/40</Grade>
+      <Grade />
       <Category>Structural Foundations</Category>
       <SubCategory />
       <AdditionalData />
       <Area>5.7981</Area>
       <Correction />
       <Volume>0.4242</Volume>
-      <Volume_Total>0.4466826</Volume_Total>
-      <Mass>1072.0382399999999</Mass>
-      <Density>2400</Density>
+      <Volume_Total>0</Volume_Total>
+      <Mass>0</Mass>
+      <Density>68.16747667436367</Density>
       <Level>-550</Level>
       <LevelName>Level Lower</LevelName>
-      <ECI>0.1262</ECI>
-      <EC>135.29122588799999</EC>
-      <Volume_Cumulative>0.43842556050955417</Volume_Cumulative>
-      <ECI_Cumulative>0.19653962264150943</ECI_Cumulative>
-      <EC_Cumulative>232.64569855799996</EC_Cumulative>
+      <ECI>0</ECI>
+      <EC>0</EC>
+      <Volume_Cumulative>0</Volume_Cumulative>
+      <ECI_Cumulative>0</ECI_Cumulative>
+      <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
       <isSubstructure>false</isSubstructure>
@@ -4330,7 +4368,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d18a</GUID>
@@ -4390,7 +4428,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1bd</GUID>
@@ -4450,7 +4488,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1c1</GUID>
@@ -4510,7 +4548,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1d5</GUID>
@@ -4570,7 +4608,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1d9</GUID>
@@ -4630,7 +4668,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d20a</GUID>
@@ -4690,7 +4728,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d20e</GUID>
@@ -4750,7 +4788,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>5b7ac240-e9a7-43b2-b6bf-246956549a40-00099178</GUID>
@@ -4780,7 +4818,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>5b7ac240-e9a7-43b2-b6bf-246956549a40-00099411</GUID>
@@ -4810,7 +4848,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>5b7ac240-e9a7-43b2-b6bf-246956549a40-0009972b</GUID>
@@ -4841,7 +4879,7 @@ Recommended Value</Description>
       <EC_Cumulative>15122.853060880498</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>66314231-2860-4f9f-87a8-f581c5b96b2f-0009e2e4</GUID>
@@ -4871,7 +4909,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>66314231-2860-4f9f-87a8-f581c5b96b2f-0009e2e4</GUID>
@@ -4901,7 +4939,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>66314231-2860-4f9f-87a8-f581c5b96b2f-0009e2e4</GUID>
@@ -8995,25 +9033,24 @@ Recommended Value</Description>
       <Id>1115218</Id>
       <Name>CL_W1</Name>
       <MaterialName>Concrete Precast</MaterialName>
-      <CarboMaterialName>Concrete - Precast</CarboMaterialName>
       <MaterialCategoryName>Concrete</MaterialCategoryName>
-      <Grade>C40/50</Grade>
+      <Grade />
       <Category>Walls</Category>
       <SubCategory />
       <AdditionalData />
       <Area>1.08</Area>
       <Correction />
       <Volume>0.3024</Volume>
-      <Volume_Total>0.30542400000000003</Volume_Total>
-      <Mass>728.43624000000011</Mass>
-      <Density>2385</Density>
+      <Volume_Total>0</Volume_Total>
+      <Mass>0</Mass>
+      <Density>0</Density>
       <Level>-1200</Level>
       <LevelName>Foundation</LevelName>
-      <ECI>0.2042</ECI>
-      <EC>148.74668020800001</EC>
-      <Volume_Cumulative>0.30682147322292996</Volume_Cumulative>
-      <ECI_Cumulative>0.23456309454606403</ECI_Cumulative>
-      <EC_Cumulative>179.00560700064</EC_Cumulative>
+      <ECI>0</ECI>
+      <EC>0</EC>
+      <Volume_Cumulative>0</Volume_Cumulative>
+      <ECI_Cumulative>0</ECI_Cumulative>
+      <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
       <isSubstructure>false</isSubstructure>
@@ -9046,7 +9083,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>08db5da7-cb06-4fcc-ab79-ff953d5a5a20-0011047a</GUID>
@@ -9347,7 +9384,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>dded2a59-7629-4456-bb60-fb05ab8364a4-00116b5a</GUID>
@@ -9377,7 +9414,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>1d9da0f4-4ea6-4749-ba7f-645252c32260-00116c49</GUID>
@@ -9468,7 +9505,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>d86ad9c9-b7ad-4131-8d26-64410fd18def-0011ee8f</GUID>
@@ -12170,7 +12207,7 @@ Recommended Value</Description>
       <EC_Cumulative>1471.6129253669997</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>f4bb716f-cdfc-4bdf-af35-1a12450670d4-0011f9a3</GUID>
@@ -12200,7 +12237,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>f4bb716f-cdfc-4bdf-af35-1a12450670d4-0011f9ad</GUID>
@@ -12230,7 +12267,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>f4bb716f-cdfc-4bdf-af35-1a12450670d4-0011f9c1</GUID>
@@ -12260,7 +12297,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>f4bb716f-cdfc-4bdf-af35-1a12450670d4-0011f9cb</GUID>
@@ -13250,7 +13287,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>f25c4488-ef7a-4bd3-a7c5-29ed7d362ea3-0012695b</GUID>
@@ -13280,7 +13317,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>f25c4488-ef7a-4bd3-a7c5-29ed7d362ea3-0012695b</GUID>
@@ -13310,7 +13347,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>f25c4488-ef7a-4bd3-a7c5-29ed7d362ea3-0012695b</GUID>
@@ -14961,7 +14998,7 @@ Recommended Value</Description>
       <EC_Cumulative>78.974494559999982</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>a9765818-e7e5-4bc4-b2dc-cf3423a7131f-00151381</GUID>
@@ -14991,7 +15028,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>a9765818-e7e5-4bc4-b2dc-cf3423a7131f-00151396</GUID>
@@ -15021,7 +15058,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>a9765818-e7e5-4bc4-b2dc-cf3423a7131f-001513a7</GUID>
@@ -17722,7 +17759,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>eae8d474-ca63-4caa-91c3-113981533040-0015df19</GUID>
@@ -18202,7 +18239,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>d2603e78-482b-4f40-8ab4-883049f8cc67-0015ecc4</GUID>
@@ -18322,7 +18359,7 @@ Recommended Value</Description>
       <EC_Cumulative>0</EC_Cumulative>
       <isDemolished>false</isDemolished>
       <isExisting>false</isExisting>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <includeInCalc>true</includeInCalc>
       <rcDensity>0</rcDensity>
       <GUID>d2603e78-482b-4f40-8ab4-883049f8cc67-0015eced</GUID>
@@ -18544,16 +18581,16 @@ Recommended Value</Description>
       <MaterialName>Concrete - Precast</MaterialName>
       <Category>Walls</Category>
       <SubCategory />
-      <Description>(Substructure)Walls</Description>
-      <Volume>89.7912</Volume>
+      <Description>Walls</Description>
+      <Volume>90.0936</Volume>
       <VolumeLink />
       <Grade>C40/50</Grade>
-      <TotalVolume>99.758023200000011</TotalVolume>
+      <TotalVolume>100.0939896</TotalVolume>
       <Density>2385</Density>
-      <Mass>237922.88533200003</Mass>
+      <Mass>238724.165196</Mass>
       <ECI>0.2042</ECI>
-      <EC>48.5838531847944</EC>
-      <PerCent>26.97</PerCent>
+      <EC>48.747474533023194</EC>
+      <PerCent>27.06</PerCent>
       <Correction />
       <CorrectionDescription />
       <Waste>1</Waste>
@@ -18561,10 +18598,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -18728,7 +18767,7 @@ Recommended Value</Description>
           <EC_Cumulative>7500.3586113171605</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>17836a3c-e764-47fa-a2e0-08216444f621-0007882c</GUID>
@@ -18759,7 +18798,7 @@ Recommended Value</Description>
           <EC_Cumulative>5946.66807991974</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>17836a3c-e764-47fa-a2e0-08216444f621-00078937</GUID>
@@ -18790,7 +18829,7 @@ Recommended Value</Description>
           <EC_Cumulative>4855.05353008548</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>5b7ac240-e9a7-43b2-b6bf-246956549a40-00099178</GUID>
@@ -18821,7 +18860,7 @@ Recommended Value</Description>
           <EC_Cumulative>1315.19397365748</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>5b7ac240-e9a7-43b2-b6bf-246956549a40-00099411</GUID>
@@ -18852,10 +18891,41 @@ Recommended Value</Description>
           <EC_Cumulative>4372.31850194718</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>5b7ac240-e9a7-43b2-b6bf-246956549a40-0009972b</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
+          <Id>1115218</Id>
+          <Name>CL_W1</Name>
+          <MaterialName>Concrete Precast</MaterialName>
+          <CarboMaterialName>Concrete - Precast</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade>C40/50</Grade>
+          <Category>Walls</Category>
+          <SubCategory />
+          <AdditionalData />
+          <Area>1.08</Area>
+          <Correction />
+          <Volume>0.3024</Volume>
+          <Volume_Total>0.30542400000000003</Volume_Total>
+          <Mass>728.43624000000011</Mass>
+          <Density>2385</Density>
+          <Level>-1200</Level>
+          <LevelName>Foundation</LevelName>
+          <ECI>0.2042</ECI>
+          <EC>148.74668020800001</EC>
+          <Volume_Cumulative>0.30682147322292996</Volume_Cumulative>
+          <ECI_Cumulative>0.23456309454606403</ECI_Cumulative>
+          <EC_Cumulative>179.00560700064</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>0</rcDensity>
+          <GUID>08db5da7-cb06-4fcc-ab79-ff953d5a5a20-00110452</GUID>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
@@ -18883,7 +18953,7 @@ Recommended Value</Description>
           <EC_Cumulative>538.43750042255988</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>08db5da7-cb06-4fcc-ab79-ff953d5a5a20-0011047a</GUID>
@@ -18914,7 +18984,7 @@ Recommended Value</Description>
           <EC_Cumulative>16451.349301059479</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>dded2a59-7629-4456-bb60-fb05ab8364a4-00116b5a</GUID>
@@ -18945,7 +19015,7 @@ Recommended Value</Description>
           <EC_Cumulative>12172.499665995241</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>1d9da0f4-4ea6-4749-ba7f-645252c32260-00116c49</GUID>
@@ -18953,7 +19023,7 @@ Recommended Value</Description>
       </AllElements>
       <isExisting>false</isExisting>
       <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <additionalData />
       <RcDensity>0</RcDensity>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
@@ -18963,7 +19033,7 @@ Recommended Value</Description>
       <MaterialName>Sandstone</MaterialName>
       <Category>Floors</Category>
       <SubCategory />
-      <Description>(Substructure)Floors</Description>
+      <Description>Floors</Description>
       <Volume>14.3776</Volume>
       <VolumeLink />
       <Grade />
@@ -18980,10 +19050,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -19147,7 +19219,7 @@ Recommended Value</Description>
           <EC_Cumulative>11884.850201975398</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>17836a3c-e764-47fa-a2e0-08216444f621-00078ef8</GUID>
@@ -19178,7 +19250,7 @@ Recommended Value</Description>
           <EC_Cumulative>32544.684680919836</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>f25c4488-ef7a-4bd3-a7c5-29ed7d362ea3-0012695b</GUID>
@@ -19186,7 +19258,7 @@ Recommended Value</Description>
       </AllElements>
       <isExisting>false</isExisting>
       <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <additionalData />
       <RcDensity>0</RcDensity>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
@@ -19196,7 +19268,7 @@ Recommended Value</Description>
       <MaterialName>Concrete - Insitu</MaterialName>
       <Category>Floors</Category>
       <SubCategory />
-      <Description>(Substructure)Floors</Description>
+      <Description>Floors</Description>
       <Volume>49.9589</Volume>
       <VolumeLink />
       <Grade>C16/20</Grade>
@@ -19213,10 +19285,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -19381,7 +19455,7 @@ Recommended Value</Description>
           <EC_Cumulative>11884.850201975398</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>17836a3c-e764-47fa-a2e0-08216444f621-00078ef8</GUID>
@@ -19412,7 +19486,7 @@ Recommended Value</Description>
           <EC_Cumulative>15122.853060880498</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>66314231-2860-4f9f-87a8-f581c5b96b2f-0009e2e4</GUID>
@@ -19443,7 +19517,7 @@ Recommended Value</Description>
           <EC_Cumulative>32544.684680919836</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>f25c4488-ef7a-4bd3-a7c5-29ed7d362ea3-0012695b</GUID>
@@ -19451,7 +19525,7 @@ Recommended Value</Description>
       </AllElements>
       <isExisting>false</isExisting>
       <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <additionalData />
       <RcDensity>0</RcDensity>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
@@ -19461,7 +19535,7 @@ Recommended Value</Description>
       <MaterialName>Concrete - Insitu</MaterialName>
       <Category>Floors</Category>
       <SubCategory />
-      <Description>(Substructure)Floors</Description>
+      <Description>Floors</Description>
       <Volume>42.7701</Volume>
       <VolumeLink />
       <Grade>C16/20</Grade>
@@ -19478,10 +19552,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -19646,7 +19722,7 @@ Recommended Value</Description>
           <EC_Cumulative>11884.850201975398</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>17836a3c-e764-47fa-a2e0-08216444f621-00078ef8</GUID>
@@ -19677,7 +19753,7 @@ Recommended Value</Description>
           <EC_Cumulative>15122.853060880498</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>66314231-2860-4f9f-87a8-f581c5b96b2f-0009e2e4</GUID>
@@ -19708,7 +19784,7 @@ Recommended Value</Description>
           <EC_Cumulative>32544.684680919836</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>f25c4488-ef7a-4bd3-a7c5-29ed7d362ea3-0012695b</GUID>
@@ -19716,7 +19792,7 @@ Recommended Value</Description>
       </AllElements>
       <isExisting>false</isExisting>
       <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <additionalData />
       <RcDensity>0</RcDensity>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
@@ -19726,16 +19802,16 @@ Recommended Value</Description>
       <MaterialName>Concrete - Insitu</MaterialName>
       <Category>Structural Foundations</Category>
       <SubCategory />
-      <Description>(Substructure)Structural Foundations</Description>
-      <Volume>15.304</Volume>
+      <Description>Structural Foundations</Description>
+      <Volume>22.515399999999993</Volume>
       <VolumeLink />
       <Grade>C16/20</Grade>
-      <TotalVolume>17.726623200000002</TotalVolume>
+      <TotalVolume>26.079587819999993</TotalVolume>
       <Density>2400</Density>
-      <Mass>42543.895680000009</Mass>
+      <Mass>62591.010767999986</Mass>
       <ECI>0.1262</ECI>
-      <EC>5.3690396348160014</EC>
-      <PerCent>2.98</PerCent>
+      <EC>7.8989855589215985</EC>
+      <PerCent>4.39</PerCent>
       <Correction />
       <CorrectionDescription />
       <Waste>5.3</Waste>
@@ -19743,10 +19819,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -19911,431 +19989,11 @@ Recommended Value</Description>
           <EC_Cumulative>59.230870919999994</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d13f</GUID>
         </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512394</Id>
-          <Name>600 x 600 x 900mm</Name>
-          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
-          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade>C32/40</Grade>
-          <Category>Structural Foundations</Category>
-          <SubCategory />
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction />
-          <Volume>0.108</Volume>
-          <Volume_Total>0.11372399999999999</Volume_Total>
-          <Mass>272.9376</Mass>
-          <Density>2400</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.1262</ECI>
-          <EC>34.44472512</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>0</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d18a</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512445</Id>
-          <Name>600 x 600 x 900mm</Name>
-          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
-          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade>C32/40</Grade>
-          <Category>Structural Foundations</Category>
-          <SubCategory />
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction />
-          <Volume>0.108</Volume>
-          <Volume_Total>0.11372399999999999</Volume_Total>
-          <Mass>272.9376</Mass>
-          <Density>2400</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.1262</ECI>
-          <EC>34.44472512</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>0</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1bd</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512449</Id>
-          <Name>600 x 600 x 900mm</Name>
-          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
-          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade>C32/40</Grade>
-          <Category>Structural Foundations</Category>
-          <SubCategory />
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction />
-          <Volume>0.108</Volume>
-          <Volume_Total>0.11372399999999999</Volume_Total>
-          <Mass>272.9376</Mass>
-          <Density>2400</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.1262</ECI>
-          <EC>34.44472512</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>0</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1c1</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512469</Id>
-          <Name>600 x 600 x 900mm</Name>
-          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
-          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade>C32/40</Grade>
-          <Category>Structural Foundations</Category>
-          <SubCategory />
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction />
-          <Volume>0.108</Volume>
-          <Volume_Total>0.11372399999999999</Volume_Total>
-          <Mass>272.9376</Mass>
-          <Density>2400</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.1262</ECI>
-          <EC>34.44472512</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>0</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1d5</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512473</Id>
-          <Name>600 x 600 x 900mm</Name>
-          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
-          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade>C32/40</Grade>
-          <Category>Structural Foundations</Category>
-          <SubCategory />
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction />
-          <Volume>0.108</Volume>
-          <Volume_Total>0.11372399999999999</Volume_Total>
-          <Mass>272.9376</Mass>
-          <Density>2400</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.1262</ECI>
-          <EC>34.44472512</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>0</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1d9</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512522</Id>
-          <Name>600 x 600 x 900mm</Name>
-          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
-          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade>C32/40</Grade>
-          <Category>Structural Foundations</Category>
-          <SubCategory />
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction />
-          <Volume>0.108</Volume>
-          <Volume_Total>0.11372399999999999</Volume_Total>
-          <Mass>272.9376</Mass>
-          <Density>2400</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.1262</ECI>
-          <EC>34.44472512</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>0</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d20a</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512526</Id>
-          <Name>600 x 600 x 900mm</Name>
-          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
-          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade>C32/40</Grade>
-          <Category>Structural Foundations</Category>
-          <SubCategory />
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction />
-          <Volume>0.108</Volume>
-          <Volume_Total>0.11372399999999999</Volume_Total>
-          <Mass>272.9376</Mass>
-          <Density>2400</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.1262</ECI>
-          <EC>34.44472512</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>0</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d20e</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>1175183</Id>
-          <Name>3800 x 3800 x 600mm</Name>
-          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
-          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade>C32/40</Grade>
-          <Category>Structural Foundations</Category>
-          <SubCategory />
-          <AdditionalData />
-          <Area>44.08</Area>
-          <Correction />
-          <Volume>14.44</Volume>
-          <Volume_Total>15.205319999999999</Volume_Total>
-          <Mass>36492.768</Mass>
-          <Density>2400</Density>
-          <Level>0</Level>
-          <LevelName>Level 1</LevelName>
-          <ECI>0.1262</ECI>
-          <EC>4605.3873216</EC>
-          <Volume_Cumulative>14.924245859872611</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150943</ECI_Cumulative>
-          <EC_Cumulative>7919.3868156</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>0</rcDensity>
-          <GUID>d86ad9c9-b7ad-4131-8d26-64410fd18def-0011ee8f</GUID>
-        </CarboElement>
-      </AllElements>
-      <isExisting>false</isExisting>
-      <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
-      <additionalData />
-      <RcDensity>0</RcDensity>
-      <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
-    </CarboGroup>
-    <CarboGroup>
-      <Id>2005</Id>
-      <MaterialName>Concrete - Insitu</MaterialName>
-      <Category>Structural Foundations</Category>
-      <SubCategory />
-      <Description>Structural Foundations</Description>
-      <Volume>7.2113999999999994</Volume>
-      <VolumeLink />
-      <Grade>C16/20</Grade>
-      <TotalVolume>8.35296462</TotalVolume>
-      <Density>2400</Density>
-      <Mass>20047.115088</Mass>
-      <ECI>0.1262</ECI>
-      <EC>2.5299459241056</EC>
-      <PerCent>1.4</PerCent>
-      <Correction />
-      <CorrectionDescription />
-      <Waste>5.3</Waste>
-      <WasteDescription />
-      <Additional>0</Additional>
-      <AdditionalDescription />
-      <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
-        <designLifeToEnd>true</designLifeToEnd>
-        <name />
-        <B1>0</B1>
-        <B2>0</B2>
-        <B3>0</B3>
-        <B4>1</B4>
-        <B5>0</B5>
-        <B6>0</B6>
-        <B7>0</B7>
-        <totalECI>0</totalECI>
-        <totalValue>0</totalValue>
-        <assetType />
-      </inUseProperties>
-      <Material>
-        <Id>230712</Id>
-        <Name>Concrete - Insitu</Name>
-        <Category>Concrete</Category>
-        <Description>Based on: Insitu UK C32/40 (25% GGBS)
-Recommended Value</Description>
-        <EPDurl>https://www.istructe.org/resources/guidance/how-to-calculate-embodied-carbon/</EPDurl>
-        <Grade>C32/40</Grade>
-        <Density>2400</Density>
-        <ECI>0.1192</ECI>
-        <getVolumeECI>286.08</getVolumeECI>
-        <ECI_A1A3>0.113</ECI_A1A3>
-        <ECI_A4>0.003</ECI_A4>
-        <ECI_A5>0</ECI_A5>
-        <ECI_B1B5>0</ECI_B1B5>
-        <ECI_C1C4>0.0102</ECI_C1C4>
-        <ECI_D>-0.007</ECI_D>
-        <ECI_Seq>0</ECI_Seq>
-        <ECI_Mix>0</ECI_Mix>
-        <WasteFactor>5.3</WasteFactor>
-        <isLocked>false</isLocked>
-        <materialA1A3Properties>
-          <Id>0</Id>
-          <Category />
-          <Name />
-          <Description />
-          <Density>0</Density>
-          <ECI_A1A3>0</ECI_A1A3>
-        </materialA1A3Properties>
-        <materiaA4Properties>
-          <calcResult />
-          <name />
-          <description />
-          <distanceToSite>50</distanceToSite>
-          <materialDensity>500</materialDensity>
-          <emptyRun>80</emptyRun>
-          <emptyReturn>true</emptyReturn>
-          <vehicleSettings>
-            <name>Truck</name>
-            <maxVolume>96</maxVolume>
-            <maxLoad>22000</maxLoad>
-            <kmPer>3.85</kmPer>
-            <carboCostNew>280000</carboCostNew>
-            <totalDistance>250000</totalDistance>
-            <defaultFuel>Diesel</defaultFuel>
-            <description>An unspecified Vehicle</description>
-          </vehicleSettings>
-          <vehicleFuel>
-            <name>Diesel</name>
-            <emission>2.62</emission>
-            <production>0.4</production>
-            <unit>l</unit>
-          </vehicleFuel>
-          <value>0.010820543093270366</value>
-        </materiaA4Properties>
-        <materialA5Properties>
-          <calcResult />
-          <name />
-          <value>0</value>
-        </materialA5Properties>
-        <materialC1C4Properties>
-          <calcResult />
-          <propertyName />
-          <c1density>0</c1density>
-          <c1BaseValue>3.4</c1BaseValue>
-          <c1Value>0</c1Value>
-          <c2Properties>
-            <calcResult />
-            <name />
-            <description />
-            <distanceToSite>50</distanceToSite>
-            <materialDensity>500</materialDensity>
-            <emptyRun>80</emptyRun>
-            <emptyReturn>true</emptyReturn>
-            <vehicleSettings>
-              <name>Truck</name>
-              <maxVolume>96</maxVolume>
-              <maxLoad>22000</maxLoad>
-              <kmPer>3.85</kmPer>
-              <carboCostNew>280000</carboCostNew>
-              <totalDistance>250000</totalDistance>
-              <defaultFuel>Diesel</defaultFuel>
-              <description>An unspecified Vehicle</description>
-            </vehicleSettings>
-            <vehicleFuel>
-              <name>Diesel</name>
-              <emission>2.62</emission>
-              <production>0.4</production>
-              <unit>l</unit>
-            </vehicleFuel>
-            <value>0.010820543093270366</value>
-          </c2Properties>
-          <c2Value>0</c2Value>
-          <c3Value>0</c3Value>
-          <c4DisposalName>Generic</c4DisposalName>
-          <c4landfP>50</c4landfP>
-          <c4landfV>0.013</c4landfV>
-          <c4lanfResult>0</c4lanfResult>
-          <c4incfP>0</c4incfP>
-          <c4incfV>0</c4incfV>
-          <c4incResult>0</c4incResult>
-          <c4reUseP>50</c4reUseP>
-          <c4reUseV>0.005</c4reUseV>
-          <c4reUseResult>0</c4reUseResult>
-          <other>0</other>
-          <value>0</value>
-        </materialC1C4Properties>
-        <materialSeqProperties>
-          <propertyName>Sequestration</propertyName>
-          <value>0</value>
-          <sequestrationPeriod>40</sequestrationPeriod>
-          <comment />
-        </materialSeqProperties>
-        <materialDProperties>
-          <name />
-          <value>0</value>
-          <calcResult />
-        </materialDProperties>
-        <ECI_A1A3_Override>true</ECI_A1A3_Override>
-        <ECI_A4_Override>true</ECI_A4_Override>
-        <ECI_A5_Override>true</ECI_A5_Override>
-        <ECI_C1C4_Override>true</ECI_C1C4_Override>
-        <ECI_D_Override>true</ECI_D_Override>
-        <ECI_Seq_Override>true</ECI_Seq_Override>
-        <ECI_Mix_Info />
-      </Material>
-      <AllElements>
         <CarboElement>
           <isUpdated>false</isUpdated>
           <Id>512321</Id>
@@ -20366,6 +20024,37 @@ Recommended Value</Description>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d141</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
+          <Id>512394</Id>
+          <Name>600 x 600 x 900mm</Name>
+          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
+          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade>C32/40</Grade>
+          <Category>Structural Foundations</Category>
+          <SubCategory />
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction />
+          <Volume>0.108</Volume>
+          <Volume_Total>0.11372399999999999</Volume_Total>
+          <Mass>272.9376</Mass>
+          <Density>2400</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.1262</ECI>
+          <EC>34.44472512</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>0</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d18a</GUID>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
@@ -20400,6 +20089,37 @@ Recommended Value</Description>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
+          <Id>512445</Id>
+          <Name>600 x 600 x 900mm</Name>
+          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
+          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade>C32/40</Grade>
+          <Category>Structural Foundations</Category>
+          <SubCategory />
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction />
+          <Volume>0.108</Volume>
+          <Volume_Total>0.11372399999999999</Volume_Total>
+          <Mass>272.9376</Mass>
+          <Density>2400</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.1262</ECI>
+          <EC>34.44472512</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>0</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1bd</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
           <Id>512447</Id>
           <Name>600mm Diameter</Name>
           <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
@@ -20428,6 +20148,37 @@ Recommended Value</Description>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1bf</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
+          <Id>512449</Id>
+          <Name>600 x 600 x 900mm</Name>
+          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
+          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade>C32/40</Grade>
+          <Category>Structural Foundations</Category>
+          <SubCategory />
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction />
+          <Volume>0.108</Volume>
+          <Volume_Total>0.11372399999999999</Volume_Total>
+          <Mass>272.9376</Mass>
+          <Density>2400</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.1262</ECI>
+          <EC>34.44472512</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>0</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1c1</GUID>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
@@ -20462,6 +20213,37 @@ Recommended Value</Description>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
+          <Id>512469</Id>
+          <Name>600 x 600 x 900mm</Name>
+          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
+          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade>C32/40</Grade>
+          <Category>Structural Foundations</Category>
+          <SubCategory />
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction />
+          <Volume>0.108</Volume>
+          <Volume_Total>0.11372399999999999</Volume_Total>
+          <Mass>272.9376</Mass>
+          <Density>2400</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.1262</ECI>
+          <EC>34.44472512</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>0</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1d5</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
           <Id>512471</Id>
           <Name>600mm Diameter</Name>
           <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
@@ -20490,6 +20272,37 @@ Recommended Value</Description>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1d7</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
+          <Id>512473</Id>
+          <Name>600 x 600 x 900mm</Name>
+          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
+          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade>C32/40</Grade>
+          <Category>Structural Foundations</Category>
+          <SubCategory />
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction />
+          <Volume>0.108</Volume>
+          <Volume_Total>0.11372399999999999</Volume_Total>
+          <Mass>272.9376</Mass>
+          <Density>2400</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.1262</ECI>
+          <EC>34.44472512</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>0</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1d9</GUID>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
@@ -20524,6 +20337,37 @@ Recommended Value</Description>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
+          <Id>512522</Id>
+          <Name>600 x 600 x 900mm</Name>
+          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
+          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade>C32/40</Grade>
+          <Category>Structural Foundations</Category>
+          <SubCategory />
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction />
+          <Volume>0.108</Volume>
+          <Volume_Total>0.11372399999999999</Volume_Total>
+          <Mass>272.9376</Mass>
+          <Density>2400</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.1262</ECI>
+          <EC>34.44472512</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>0</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d20a</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
           <Id>512524</Id>
           <Name>600mm Diameter</Name>
           <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
@@ -20555,6 +20399,37 @@ Recommended Value</Description>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
+          <Id>512526</Id>
+          <Name>600 x 600 x 900mm</Name>
+          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
+          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade>C32/40</Grade>
+          <Category>Structural Foundations</Category>
+          <SubCategory />
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction />
+          <Volume>0.108</Volume>
+          <Volume_Total>0.11372399999999999</Volume_Total>
+          <Mass>272.9376</Mass>
+          <Density>2400</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.1262</ECI>
+          <EC>34.44472512</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>0</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d20e</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
           <Id>512528</Id>
           <Name>600mm Diameter</Name>
           <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
@@ -20583,6 +20458,37 @@ Recommended Value</Description>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d210</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
+          <Id>1175183</Id>
+          <Name>3800 x 3800 x 600mm</Name>
+          <MaterialName>Concrete UK - C40/50 - 25% GGBS II</MaterialName>
+          <CarboMaterialName>Concrete - Insitu</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade>C32/40</Grade>
+          <Category>Structural Foundations</Category>
+          <SubCategory />
+          <AdditionalData />
+          <Area>44.08</Area>
+          <Correction />
+          <Volume>14.44</Volume>
+          <Volume_Total>15.205319999999999</Volume_Total>
+          <Mass>36492.768</Mass>
+          <Density>2400</Density>
+          <Level>0</Level>
+          <LevelName>Level 1</LevelName>
+          <ECI>0.1262</ECI>
+          <EC>4605.3873216</EC>
+          <Volume_Cumulative>14.924245859872611</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150943</ECI_Cumulative>
+          <EC_Cumulative>7919.3868156</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>0</rcDensity>
+          <GUID>d86ad9c9-b7ad-4131-8d26-64410fd18def-0011ee8f</GUID>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
@@ -20872,11 +20778,11 @@ Recommended Value</Description>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2006</Id>
+      <Id>2005</Id>
       <MaterialName>Concrete - Insitu</MaterialName>
       <Category>Floors</Category>
       <SubCategory />
-      <Description>(Substructure)Floors</Description>
+      <Description>Floors</Description>
       <Volume>3.5037</Volume>
       <VolumeLink />
       <Grade>C16/20</Grade>
@@ -20893,10 +20799,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -21061,7 +20969,7 @@ Recommended Value</Description>
           <EC_Cumulative>15122.853060880498</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>66314231-2860-4f9f-87a8-f581c5b96b2f-0009e2e4</GUID>
@@ -21069,13 +20977,13 @@ Recommended Value</Description>
       </AllElements>
       <isExisting>false</isExisting>
       <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <additionalData />
       <RcDensity>0</RcDensity>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2007</Id>
+      <Id>2006</Id>
       <MaterialName>Steel Generic</MaterialName>
       <Category>Structural Columns</Category>
       <SubCategory />
@@ -21096,10 +21004,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -21773,7 +21683,7 @@ Recommended Value</Description>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2008</Id>
+      <Id>2007</Id>
       <MaterialName>Steel Generic</MaterialName>
       <Category>Structural Framing</Category>
       <SubCategory />
@@ -21794,10 +21704,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -22378,7 +22290,7 @@ Recommended Value</Description>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2009</Id>
+      <Id>2008</Id>
       <MaterialName>Steel Generic</MaterialName>
       <Category>Structural Framing</Category>
       <SubCategory />
@@ -22399,10 +22311,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -24440,7 +24354,7 @@ Recommended Value</Description>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2010</Id>
+      <Id>2009</Id>
       <MaterialName>Aluminium</MaterialName>
       <Category>Structural Framing</Category>
       <SubCategory />
@@ -24461,10 +24375,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -27588,209 +27504,7 @@ Recommended Value</Description>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2011</Id>
-      <MaterialName>Concrete - Precast</MaterialName>
-      <Category>Walls</Category>
-      <SubCategory />
-      <Description>Walls</Description>
-      <Volume>0.3024</Volume>
-      <VolumeLink />
-      <Grade>C40/50</Grade>
-      <TotalVolume>0.33596640000000005</TotalVolume>
-      <Density>2385</Density>
-      <Mass>801.27986400000009</Mass>
-      <ECI>0.2042</ECI>
-      <EC>0.1636213482288</EC>
-      <PerCent>0.09</PerCent>
-      <Correction />
-      <CorrectionDescription />
-      <Waste>1</Waste>
-      <WasteDescription />
-      <Additional>0</Additional>
-      <AdditionalDescription />
-      <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
-        <designLifeToEnd>true</designLifeToEnd>
-        <name />
-        <B1>0</B1>
-        <B2>0</B2>
-        <B3>0</B3>
-        <B4>1</B4>
-        <B5>0</B5>
-        <B6>0</B6>
-        <B7>0</B7>
-        <totalECI>0</totalECI>
-        <totalValue>0</totalValue>
-        <assetType />
-      </inUseProperties>
-      <Material>
-        <Id>258680</Id>
-        <Name>Concrete - Precast</Name>
-        <Category>Concrete</Category>
-        <Description>Precast_concrete C40/50 avg UK cement mix</Description>
-        <EPDurl>https://www.istructe.org/resources/guidance/how-to-calculate-embodied-carbon/</EPDurl>
-        <Grade>C40/50</Grade>
-        <Density>2385</Density>
-        <ECI>0.1972</ECI>
-        <getVolumeECI>470.32199999999995</getVolumeECI>
-        <ECI_A1A3>0.173</ECI_A1A3>
-        <ECI_A4>0.021</ECI_A4>
-        <ECI_A5>0</ECI_A5>
-        <ECI_B1B5>0</ECI_B1B5>
-        <ECI_C1C4>0.0102</ECI_C1C4>
-        <ECI_D>-0.007</ECI_D>
-        <ECI_Seq>0</ECI_Seq>
-        <ECI_Mix>0</ECI_Mix>
-        <WasteFactor>1</WasteFactor>
-        <isLocked>false</isLocked>
-        <materialA1A3Properties>
-          <Id>0</Id>
-          <Category />
-          <Name />
-          <Description />
-          <Density>0</Density>
-          <ECI_A1A3>0</ECI_A1A3>
-        </materialA1A3Properties>
-        <materiaA4Properties>
-          <calcResult />
-          <name />
-          <description />
-          <distanceToSite>50</distanceToSite>
-          <materialDensity>500</materialDensity>
-          <emptyRun>80</emptyRun>
-          <emptyReturn>true</emptyReturn>
-          <vehicleSettings>
-            <name>Truck</name>
-            <maxVolume>96</maxVolume>
-            <maxLoad>22000</maxLoad>
-            <kmPer>3.85</kmPer>
-            <carboCostNew>280000</carboCostNew>
-            <totalDistance>250000</totalDistance>
-            <defaultFuel>Diesel</defaultFuel>
-            <description>An unspecified Vehicle</description>
-          </vehicleSettings>
-          <vehicleFuel>
-            <name>Diesel</name>
-            <emission>2.62</emission>
-            <production>0.4</production>
-            <unit>l</unit>
-          </vehicleFuel>
-          <value>0.010820543093270366</value>
-        </materiaA4Properties>
-        <materialA5Properties>
-          <calcResult />
-          <name />
-          <value>0</value>
-        </materialA5Properties>
-        <materialC1C4Properties>
-          <calcResult />
-          <propertyName />
-          <c1density>0</c1density>
-          <c1BaseValue>3.4</c1BaseValue>
-          <c1Value>0</c1Value>
-          <c2Properties>
-            <calcResult />
-            <name />
-            <description />
-            <distanceToSite>50</distanceToSite>
-            <materialDensity>500</materialDensity>
-            <emptyRun>80</emptyRun>
-            <emptyReturn>true</emptyReturn>
-            <vehicleSettings>
-              <name>Truck</name>
-              <maxVolume>96</maxVolume>
-              <maxLoad>22000</maxLoad>
-              <kmPer>3.85</kmPer>
-              <carboCostNew>280000</carboCostNew>
-              <totalDistance>250000</totalDistance>
-              <defaultFuel>Diesel</defaultFuel>
-              <description>An unspecified Vehicle</description>
-            </vehicleSettings>
-            <vehicleFuel>
-              <name>Diesel</name>
-              <emission>2.62</emission>
-              <production>0.4</production>
-              <unit>l</unit>
-            </vehicleFuel>
-            <value>0.010820543093270366</value>
-          </c2Properties>
-          <c2Value>0</c2Value>
-          <c3Value>0</c3Value>
-          <c4DisposalName>Generic</c4DisposalName>
-          <c4landfP>50</c4landfP>
-          <c4landfV>0.013</c4landfV>
-          <c4lanfResult>0</c4lanfResult>
-          <c4incfP>0</c4incfP>
-          <c4incfV>0</c4incfV>
-          <c4incResult>0</c4incResult>
-          <c4reUseP>50</c4reUseP>
-          <c4reUseV>0.005</c4reUseV>
-          <c4reUseResult>0</c4reUseResult>
-          <other>0</other>
-          <value>0</value>
-        </materialC1C4Properties>
-        <materialSeqProperties>
-          <propertyName>Sequestration</propertyName>
-          <value>0</value>
-          <sequestrationPeriod>40</sequestrationPeriod>
-          <comment />
-        </materialSeqProperties>
-        <materialDProperties>
-          <name />
-          <value>0</value>
-          <calcResult />
-        </materialDProperties>
-        <ECI_A1A3_Override>true</ECI_A1A3_Override>
-        <ECI_A4_Override>true</ECI_A4_Override>
-        <ECI_A5_Override>true</ECI_A5_Override>
-        <ECI_C1C4_Override>true</ECI_C1C4_Override>
-        <ECI_D_Override>true</ECI_D_Override>
-        <ECI_Seq_Override>true</ECI_Seq_Override>
-        <ECI_Mix_Info />
-      </Material>
-      <AllElements>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>1115218</Id>
-          <Name>CL_W1</Name>
-          <MaterialName>Concrete Precast</MaterialName>
-          <CarboMaterialName>Concrete - Precast</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade>C40/50</Grade>
-          <Category>Walls</Category>
-          <SubCategory />
-          <AdditionalData />
-          <Area>1.08</Area>
-          <Correction />
-          <Volume>0.3024</Volume>
-          <Volume_Total>0.30542400000000003</Volume_Total>
-          <Mass>728.43624000000011</Mass>
-          <Density>2385</Density>
-          <Level>-1200</Level>
-          <LevelName>Foundation</LevelName>
-          <ECI>0.2042</ECI>
-          <EC>148.74668020800001</EC>
-          <Volume_Cumulative>0.30682147322292996</Volume_Cumulative>
-          <ECI_Cumulative>0.23456309454606403</ECI_Cumulative>
-          <EC_Cumulative>179.00560700064</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>false</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>0</rcDensity>
-          <GUID>08db5da7-cb06-4fcc-ab79-ff953d5a5a20-00110452</GUID>
-        </CarboElement>
-      </AllElements>
-      <isExisting>false</isExisting>
-      <isDemolished>false</isDemolished>
-      <isSubstructure>false</isSubstructure>
-      <additionalData />
-      <RcDensity>0</RcDensity>
-      <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
-    </CarboGroup>
-    <CarboGroup>
-      <Id>2012</Id>
+      <Id>2010</Id>
       <MaterialName>Steel Generic</MaterialName>
       <Category>Structural Framing</Category>
       <SubCategory />
@@ -27811,10 +27525,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -28829,7 +28545,7 @@ Recommended Value</Description>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2013</Id>
+      <Id>2011</Id>
       <MaterialName>Concrete - Insitu</MaterialName>
       <Category>Structural Columns</Category>
       <SubCategory />
@@ -28850,10 +28566,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -29032,7 +28750,7 @@ Recommended Value</Description>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2014</Id>
+      <Id>2012</Id>
       <MaterialName>Timber Wood Softwood</MaterialName>
       <Category>Structural Framing</Category>
       <SubCategory />
@@ -29053,10 +28771,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -35341,11 +35061,11 @@ Recommended Value</Description>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2015</Id>
+      <Id>2013</Id>
       <MaterialName>Concrete - Insitu</MaterialName>
       <Category>Structural Foundations</Category>
       <SubCategory />
-      <Description>(Substructure)Structural Foundations</Description>
+      <Description>Structural Foundations</Description>
       <Volume>14.5638</Volume>
       <VolumeLink />
       <Grade>C16/20</Grade>
@@ -35362,10 +35082,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -35530,7 +35252,7 @@ Recommended Value</Description>
           <EC_Cumulative>1471.6129253669997</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>f4bb716f-cdfc-4bdf-af35-1a12450670d4-0011f9a3</GUID>
@@ -35561,7 +35283,7 @@ Recommended Value</Description>
           <EC_Cumulative>3046.8250314449997</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>f4bb716f-cdfc-4bdf-af35-1a12450670d4-0011f9ad</GUID>
@@ -35592,7 +35314,7 @@ Recommended Value</Description>
           <EC_Cumulative>1125.496234278</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>f4bb716f-cdfc-4bdf-af35-1a12450670d4-0011f9c1</GUID>
@@ -35623,7 +35345,7 @@ Recommended Value</Description>
           <EC_Cumulative>2343.3487524719994</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>f4bb716f-cdfc-4bdf-af35-1a12450670d4-0011f9cb</GUID>
@@ -35631,17 +35353,17 @@ Recommended Value</Description>
       </AllElements>
       <isExisting>false</isExisting>
       <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <additionalData />
       <RcDensity>0</RcDensity>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2016</Id>
+      <Id>2014</Id>
       <MaterialName>Concrete - Insitu</MaterialName>
       <Category>Structural Foundations</Category>
       <SubCategory />
-      <Description>(Substructure)Structural Foundations</Description>
+      <Description>Structural Foundations</Description>
       <Volume>0.864</Volume>
       <VolumeLink />
       <Grade>C16/20</Grade>
@@ -35658,10 +35380,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -35826,7 +35550,7 @@ Recommended Value</Description>
           <EC_Cumulative>78.974494559999982</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>a9765818-e7e5-4bc4-b2dc-cf3423a7131f-00151381</GUID>
@@ -35857,7 +35581,7 @@ Recommended Value</Description>
           <EC_Cumulative>78.974494559999982</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>a9765818-e7e5-4bc4-b2dc-cf3423a7131f-00151396</GUID>
@@ -35888,7 +35612,7 @@ Recommended Value</Description>
           <EC_Cumulative>78.974494559999982</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>a9765818-e7e5-4bc4-b2dc-cf3423a7131f-001513a7</GUID>
@@ -35919,7 +35643,7 @@ Recommended Value</Description>
           <EC_Cumulative>78.974494559999982</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>eae8d474-ca63-4caa-91c3-113981533040-0015df19</GUID>
@@ -35950,7 +35674,7 @@ Recommended Value</Description>
           <EC_Cumulative>78.974494559999982</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>d2603e78-482b-4f40-8ab4-883049f8cc67-0015ecc4</GUID>
@@ -35981,7 +35705,7 @@ Recommended Value</Description>
           <EC_Cumulative>78.974494559999982</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>0</rcDensity>
           <GUID>d2603e78-482b-4f40-8ab4-883049f8cc67-0015eced</GUID>
@@ -35989,13 +35713,13 @@ Recommended Value</Description>
       </AllElements>
       <isExisting>false</isExisting>
       <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <additionalData />
       <RcDensity>0</RcDensity>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2017</Id>
+      <Id>2015</Id>
       <MaterialName>Steel Generic Open Sections</MaterialName>
       <Category>Structural Columns</Category>
       <SubCategory />
@@ -36016,10 +35740,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -36538,20 +36264,20 @@ Recommended Value</Description>
       <isAutoReinforcementGroup>false</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2018</Id>
+      <Id>2016</Id>
       <MaterialName>Reinforcement</MaterialName>
       <Category>Reinforcement</Category>
       <SubCategory />
-      <Description>Walls reinforcement 109 kg/m³(Substructure)</Description>
-      <Volume>89.7912</Volume>
+      <Description>Walls reinforcement 109 kg/m³</Description>
+      <Volume>90.0936</Volume>
       <VolumeLink>2000</VolumeLink>
       <Grade />
-      <TotalVolume>1.4441479004636943</TotalVolume>
+      <TotalVolume>1.4490115210089172</TotalVolume>
       <Density>7850</Density>
-      <Mass>11336.56101864</Mass>
+      <Mass>11374.74043992</Mass>
       <ECI>0.87179999999999991</ECI>
-      <EC>9.8832138960503517</EC>
-      <PerCent>5.49</PerCent>
+      <EC>9.9164987155222555</EC>
+      <PerCent>5.51</PerCent>
       <Correction>*(109/7850)</Correction>
       <CorrectionDescription />
       <Waste>5.3</Waste>
@@ -36559,10 +36285,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -36726,7 +36454,7 @@ Recommended Value</Description>
           <EC_Cumulative>7500.3586113171605</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>109</rcDensity>
           <GUID>17836a3c-e764-47fa-a2e0-08216444f621-0007882c</GUID>
@@ -36757,7 +36485,7 @@ Recommended Value</Description>
           <EC_Cumulative>5946.66807991974</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>109</rcDensity>
           <GUID>17836a3c-e764-47fa-a2e0-08216444f621-00078937</GUID>
@@ -36788,7 +36516,7 @@ Recommended Value</Description>
           <EC_Cumulative>4855.05353008548</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>109</rcDensity>
           <GUID>5b7ac240-e9a7-43b2-b6bf-246956549a40-00099178</GUID>
@@ -36819,7 +36547,7 @@ Recommended Value</Description>
           <EC_Cumulative>1315.19397365748</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>109</rcDensity>
           <GUID>5b7ac240-e9a7-43b2-b6bf-246956549a40-00099411</GUID>
@@ -36850,10 +36578,41 @@ Recommended Value</Description>
           <EC_Cumulative>4372.31850194718</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>109</rcDensity>
           <GUID>5b7ac240-e9a7-43b2-b6bf-246956549a40-0009972b</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
+          <Id>1115218</Id>
+          <Name>Reinforcement of CL_W1</Name>
+          <MaterialName>Reinforcement</MaterialName>
+          <CarboMaterialName>Reinforcement</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade />
+          <Category>Reinforcement</Category>
+          <SubCategory>Walls</SubCategory>
+          <AdditionalData />
+          <Area>1.08</Area>
+          <Correction>*(109/7850)</Correction>
+          <Volume>0.3024</Volume>
+          <Volume_Total>0.0044214732229299362</Volume_Total>
+          <Mass>34.7085648</Mass>
+          <Density>7850</Density>
+          <Level>-1200</Level>
+          <LevelName>Foundation</LevelName>
+          <ECI>0.87179999999999991</ECI>
+          <EC>30.258926792639993</EC>
+          <Volume_Cumulative>0.30682147322292996</Volume_Cumulative>
+          <ECI_Cumulative>0.23456309454606403</ECI_Cumulative>
+          <EC_Cumulative>179.00560700064</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>109</rcDensity>
+          <GUID>08db5da7-cb06-4fcc-ab79-ff953d5a5a20-00110452</GUID>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
@@ -36881,7 +36640,7 @@ Recommended Value</Description>
           <EC_Cumulative>538.43750042255988</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>109</rcDensity>
           <GUID>08db5da7-cb06-4fcc-ab79-ff953d5a5a20-0011047a</GUID>
@@ -36912,7 +36671,7 @@ Recommended Value</Description>
           <EC_Cumulative>16451.349301059479</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>109</rcDensity>
           <GUID>dded2a59-7629-4456-bb60-fb05ab8364a4-00116b5a</GUID>
@@ -36943,7 +36702,7 @@ Recommended Value</Description>
           <EC_Cumulative>12172.499665995241</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>109</rcDensity>
           <GUID>1d9da0f4-4ea6-4749-ba7f-645252c32260-00116c49</GUID>
@@ -36951,16 +36710,16 @@ Recommended Value</Description>
       </AllElements>
       <isExisting>false</isExisting>
       <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <RcDensity>0</RcDensity>
       <isAutoReinforcementGroup>true</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2019</Id>
+      <Id>2017</Id>
       <MaterialName>Reinforcement</MaterialName>
       <Category>Reinforcement</Category>
       <SubCategory />
-      <Description>Floors reinforcement 175 kg/m³(Substructure)</Description>
+      <Description>Floors reinforcement 175 kg/m³</Description>
       <Volume>49.9589</Volume>
       <VolumeLink>2002</VolumeLink>
       <Grade />
@@ -36977,10 +36736,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -37144,7 +36905,7 @@ Recommended Value</Description>
           <EC_Cumulative>11884.850201975398</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>175</rcDensity>
           <GUID>17836a3c-e764-47fa-a2e0-08216444f621-00078ef8</GUID>
@@ -37175,7 +36936,7 @@ Recommended Value</Description>
           <EC_Cumulative>15122.853060880498</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>175</rcDensity>
           <GUID>66314231-2860-4f9f-87a8-f581c5b96b2f-0009e2e4</GUID>
@@ -37206,7 +36967,7 @@ Recommended Value</Description>
           <EC_Cumulative>32544.684680919836</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>175</rcDensity>
           <GUID>f25c4488-ef7a-4bd3-a7c5-29ed7d362ea3-0012695b</GUID>
@@ -37214,16 +36975,16 @@ Recommended Value</Description>
       </AllElements>
       <isExisting>false</isExisting>
       <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <RcDensity>0</RcDensity>
       <isAutoReinforcementGroup>true</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2020</Id>
+      <Id>2018</Id>
       <MaterialName>Reinforcement</MaterialName>
       <Category>Reinforcement</Category>
       <SubCategory />
-      <Description>Floors reinforcement 175 kg/m³(Substructure)</Description>
+      <Description>Floors reinforcement 175 kg/m³</Description>
       <Volume>42.7701</Volume>
       <VolumeLink>2003</VolumeLink>
       <Grade />
@@ -37240,10 +37001,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -37407,7 +37170,7 @@ Recommended Value</Description>
           <EC_Cumulative>11884.850201975398</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>175</rcDensity>
           <GUID>17836a3c-e764-47fa-a2e0-08216444f621-00078ef8</GUID>
@@ -37438,7 +37201,7 @@ Recommended Value</Description>
           <EC_Cumulative>15122.853060880498</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>175</rcDensity>
           <GUID>66314231-2860-4f9f-87a8-f581c5b96b2f-0009e2e4</GUID>
@@ -37469,7 +37232,7 @@ Recommended Value</Description>
           <EC_Cumulative>32544.684680919836</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>175</rcDensity>
           <GUID>f25c4488-ef7a-4bd3-a7c5-29ed7d362ea3-0012695b</GUID>
@@ -37477,25 +37240,25 @@ Recommended Value</Description>
       </AllElements>
       <isExisting>false</isExisting>
       <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <RcDensity>0</RcDensity>
       <isAutoReinforcementGroup>true</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2021</Id>
+      <Id>2019</Id>
       <MaterialName>Reinforcement</MaterialName>
       <Category>Reinforcement</Category>
       <SubCategory />
-      <Description>Structural Foundations reinforcement 250 kg/m³(Substructure)</Description>
-      <Volume>15.304</Volume>
+      <Description>Structural Foundations reinforcement 250 kg/m³</Description>
+      <Volume>22.515399999999993</Volume>
       <VolumeLink>2004</VolumeLink>
       <Grade />
-      <TotalVolume>0.56454214012738857</TotalVolume>
+      <TotalVolume>0.830560121656051</TotalVolume>
       <Density>7850</Density>
-      <Mass>4431.6558</Mass>
+      <Mass>6519.896955</Mass>
       <ECI>0.87179999999999991</ECI>
-      <EC>3.86351752644</EC>
-      <PerCent>2.14</PerCent>
+      <EC>5.684046165369</EC>
+      <PerCent>3.16</PerCent>
       <Correction>*(250/7850)</Correction>
       <CorrectionDescription />
       <Waste>5.3</Waste>
@@ -37503,10 +37266,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -37670,429 +37435,11 @@ Recommended Value</Description>
           <EC_Cumulative>59.230870919999994</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d13f</GUID>
         </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512394</Id>
-          <Name>Reinforcement of 600 x 600 x 900mm</Name>
-          <MaterialName>Reinforcement</MaterialName>
-          <CarboMaterialName>Reinforcement</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade />
-          <Category>Reinforcement</Category>
-          <SubCategory>Structural Foundations</SubCategory>
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction>*(250/7850)</Correction>
-          <Volume>0.108</Volume>
-          <Volume_Total>0.0036217834394904453</Volume_Total>
-          <Mass>28.430999999999994</Mass>
-          <Density>7850</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.87179999999999991</ECI>
-          <EC>24.786145799999993</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>250</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d18a</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512445</Id>
-          <Name>Reinforcement of 600 x 600 x 900mm</Name>
-          <MaterialName>Reinforcement</MaterialName>
-          <CarboMaterialName>Reinforcement</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade />
-          <Category>Reinforcement</Category>
-          <SubCategory>Structural Foundations</SubCategory>
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction>*(250/7850)</Correction>
-          <Volume>0.108</Volume>
-          <Volume_Total>0.0036217834394904453</Volume_Total>
-          <Mass>28.430999999999994</Mass>
-          <Density>7850</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.87179999999999991</ECI>
-          <EC>24.786145799999993</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>250</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1bd</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512449</Id>
-          <Name>Reinforcement of 600 x 600 x 900mm</Name>
-          <MaterialName>Reinforcement</MaterialName>
-          <CarboMaterialName>Reinforcement</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade />
-          <Category>Reinforcement</Category>
-          <SubCategory>Structural Foundations</SubCategory>
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction>*(250/7850)</Correction>
-          <Volume>0.108</Volume>
-          <Volume_Total>0.0036217834394904453</Volume_Total>
-          <Mass>28.430999999999994</Mass>
-          <Density>7850</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.87179999999999991</ECI>
-          <EC>24.786145799999993</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>250</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1c1</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512469</Id>
-          <Name>Reinforcement of 600 x 600 x 900mm</Name>
-          <MaterialName>Reinforcement</MaterialName>
-          <CarboMaterialName>Reinforcement</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade />
-          <Category>Reinforcement</Category>
-          <SubCategory>Structural Foundations</SubCategory>
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction>*(250/7850)</Correction>
-          <Volume>0.108</Volume>
-          <Volume_Total>0.0036217834394904453</Volume_Total>
-          <Mass>28.430999999999994</Mass>
-          <Density>7850</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.87179999999999991</ECI>
-          <EC>24.786145799999993</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>250</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1d5</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512473</Id>
-          <Name>Reinforcement of 600 x 600 x 900mm</Name>
-          <MaterialName>Reinforcement</MaterialName>
-          <CarboMaterialName>Reinforcement</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade />
-          <Category>Reinforcement</Category>
-          <SubCategory>Structural Foundations</SubCategory>
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction>*(250/7850)</Correction>
-          <Volume>0.108</Volume>
-          <Volume_Total>0.0036217834394904453</Volume_Total>
-          <Mass>28.430999999999994</Mass>
-          <Density>7850</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.87179999999999991</ECI>
-          <EC>24.786145799999993</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>250</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1d9</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512522</Id>
-          <Name>Reinforcement of 600 x 600 x 900mm</Name>
-          <MaterialName>Reinforcement</MaterialName>
-          <CarboMaterialName>Reinforcement</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade />
-          <Category>Reinforcement</Category>
-          <SubCategory>Structural Foundations</SubCategory>
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction>*(250/7850)</Correction>
-          <Volume>0.108</Volume>
-          <Volume_Total>0.0036217834394904453</Volume_Total>
-          <Mass>28.430999999999994</Mass>
-          <Density>7850</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.87179999999999991</ECI>
-          <EC>24.786145799999993</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>250</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d20a</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>512526</Id>
-          <Name>Reinforcement of 600 x 600 x 900mm</Name>
-          <MaterialName>Reinforcement</MaterialName>
-          <CarboMaterialName>Reinforcement</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade />
-          <Category>Reinforcement</Category>
-          <SubCategory>Structural Foundations</SubCategory>
-          <AdditionalData />
-          <Area>1.44</Area>
-          <Correction>*(250/7850)</Correction>
-          <Volume>0.108</Volume>
-          <Volume_Total>0.0036217834394904453</Volume_Total>
-          <Mass>28.430999999999994</Mass>
-          <Density>7850</Density>
-          <Level>-550</Level>
-          <LevelName>Level Lower</LevelName>
-          <ECI>0.87179999999999991</ECI>
-          <EC>24.786145799999993</EC>
-          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
-          <EC_Cumulative>59.230870919999994</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>250</rcDensity>
-          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d20e</GUID>
-        </CarboElement>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>1175183</Id>
-          <Name>Reinforcement of 3800 x 3800 x 600mm</Name>
-          <MaterialName>Reinforcement</MaterialName>
-          <CarboMaterialName>Reinforcement</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade />
-          <Category>Reinforcement</Category>
-          <SubCategory>Structural Foundations</SubCategory>
-          <AdditionalData />
-          <Area>44.08</Area>
-          <Correction>*(250/7850)</Correction>
-          <Volume>14.44</Volume>
-          <Volume_Total>0.48424585987261143</Volume_Total>
-          <Mass>3801.33</Mass>
-          <Density>7850</Density>
-          <Level>0</Level>
-          <LevelName>Level 1</LevelName>
-          <ECI>0.87179999999999991</ECI>
-          <EC>3313.9994939999997</EC>
-          <Volume_Cumulative>14.924245859872611</Volume_Cumulative>
-          <ECI_Cumulative>0.19653962264150943</ECI_Cumulative>
-          <EC_Cumulative>7919.3868156</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>250</rcDensity>
-          <GUID>d86ad9c9-b7ad-4131-8d26-64410fd18def-0011ee8f</GUID>
-        </CarboElement>
-      </AllElements>
-      <isExisting>false</isExisting>
-      <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
-      <RcDensity>0</RcDensity>
-      <isAutoReinforcementGroup>true</isAutoReinforcementGroup>
-    </CarboGroup>
-    <CarboGroup>
-      <Id>2022</Id>
-      <MaterialName>Reinforcement</MaterialName>
-      <Category>Reinforcement</Category>
-      <SubCategory />
-      <Description>Structural Foundations reinforcement 250 kg/m³</Description>
-      <Volume>7.2113999999999994</Volume>
-      <VolumeLink>2005</VolumeLink>
-      <Grade />
-      <TotalVolume>0.26601798152866241</TotalVolume>
-      <Density>7850</Density>
-      <Mass>2088.2411549999997</Mass>
-      <ECI>0.87179999999999991</ECI>
-      <EC>1.8205286389289994</EC>
-      <PerCent>1.01</PerCent>
-      <Correction>*(250/7850)</Correction>
-      <CorrectionDescription />
-      <Waste>5.3</Waste>
-      <WasteDescription />
-      <Additional>0</Additional>
-      <AdditionalDescription />
-      <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
-        <designLifeToEnd>true</designLifeToEnd>
-        <name />
-        <B1>0</B1>
-        <B2>0</B2>
-        <B3>0</B3>
-        <B4>1</B4>
-        <B5>0</B5>
-        <B6>0</B6>
-        <B7>0</B7>
-        <totalECI>0</totalECI>
-        <totalValue>0</totalValue>
-        <assetType />
-      </inUseProperties>
-      <Material>
-        <Id>28081</Id>
-        <Name>Reinforcement</Name>
-        <Category>Steel</Category>
-        <Description>Recommended Value</Description>
-        <EPDurl>https://www.istructe.org/resources/guidance/how-to-calculate-embodied-carbon/</EPDurl>
-        <Grade />
-        <Density>7850</Density>
-        <ECI>1.3097999999999999</ECI>
-        <getVolumeECI>10281.929999999998</getVolumeECI>
-        <ECI_A1A3>0.72</ECI_A1A3>
-        <ECI_A4>0.1415</ECI_A4>
-        <ECI_A5>0</ECI_A5>
-        <ECI_B1B5>0</ECI_B1B5>
-        <ECI_C1C4>0.0103</ECI_C1C4>
-        <ECI_D>0.438</ECI_D>
-        <ECI_Seq>0</ECI_Seq>
-        <ECI_Mix>0</ECI_Mix>
-        <WasteFactor>5.3</WasteFactor>
-        <isLocked>false</isLocked>
-        <materialA1A3Properties>
-          <Id>0</Id>
-          <Category />
-          <Name />
-          <Description />
-          <Density>0</Density>
-          <ECI_A1A3>0</ECI_A1A3>
-        </materialA1A3Properties>
-        <materiaA4Properties>
-          <calcResult />
-          <name />
-          <description />
-          <distanceToSite>50</distanceToSite>
-          <materialDensity>500</materialDensity>
-          <emptyRun>80</emptyRun>
-          <emptyReturn>true</emptyReturn>
-          <vehicleSettings>
-            <name>Truck</name>
-            <maxVolume>96</maxVolume>
-            <maxLoad>22000</maxLoad>
-            <kmPer>3.85</kmPer>
-            <carboCostNew>280000</carboCostNew>
-            <totalDistance>250000</totalDistance>
-            <defaultFuel>Diesel</defaultFuel>
-            <description>An unspecified Vehicle</description>
-          </vehicleSettings>
-          <vehicleFuel>
-            <name>Diesel</name>
-            <emission>2.62</emission>
-            <production>0.4</production>
-            <unit>l</unit>
-          </vehicleFuel>
-          <value>0.010820543093270366</value>
-        </materiaA4Properties>
-        <materialA5Properties>
-          <calcResult />
-          <name />
-          <value>0</value>
-        </materialA5Properties>
-        <materialC1C4Properties>
-          <calcResult />
-          <propertyName />
-          <c1density>0</c1density>
-          <c1BaseValue>3.4</c1BaseValue>
-          <c1Value>0</c1Value>
-          <c2Properties>
-            <calcResult />
-            <name />
-            <description />
-            <distanceToSite>50</distanceToSite>
-            <materialDensity>500</materialDensity>
-            <emptyRun>80</emptyRun>
-            <emptyReturn>true</emptyReturn>
-            <vehicleSettings>
-              <name>Truck</name>
-              <maxVolume>96</maxVolume>
-              <maxLoad>22000</maxLoad>
-              <kmPer>3.85</kmPer>
-              <carboCostNew>280000</carboCostNew>
-              <totalDistance>250000</totalDistance>
-              <defaultFuel>Diesel</defaultFuel>
-              <description>An unspecified Vehicle</description>
-            </vehicleSettings>
-            <vehicleFuel>
-              <name>Diesel</name>
-              <emission>2.62</emission>
-              <production>0.4</production>
-              <unit>l</unit>
-            </vehicleFuel>
-            <value>0.010820543093270366</value>
-          </c2Properties>
-          <c2Value>0</c2Value>
-          <c3Value>0</c3Value>
-          <c4DisposalName>Generic</c4DisposalName>
-          <c4landfP>50</c4landfP>
-          <c4landfV>0.013</c4landfV>
-          <c4lanfResult>0</c4lanfResult>
-          <c4incfP>0</c4incfP>
-          <c4incfV>0</c4incfV>
-          <c4incResult>0</c4incResult>
-          <c4reUseP>50</c4reUseP>
-          <c4reUseV>0.005</c4reUseV>
-          <c4reUseResult>0</c4reUseResult>
-          <other>0</other>
-          <value>0</value>
-        </materialC1C4Properties>
-        <materialSeqProperties>
-          <propertyName>Sequestration</propertyName>
-          <value>0</value>
-          <sequestrationPeriod>40</sequestrationPeriod>
-          <comment />
-        </materialSeqProperties>
-        <materialDProperties>
-          <name />
-          <value>0</value>
-          <calcResult />
-        </materialDProperties>
-        <ECI_A1A3_Override>true</ECI_A1A3_Override>
-        <ECI_A4_Override>true</ECI_A4_Override>
-        <ECI_A5_Override>true</ECI_A5_Override>
-        <ECI_C1C4_Override>true</ECI_C1C4_Override>
-        <ECI_D_Override>true</ECI_D_Override>
-        <ECI_Seq_Override>true</ECI_Seq_Override>
-        <ECI_Mix_Info />
-      </Material>
-      <AllElements>
         <CarboElement>
           <isUpdated>false</isUpdated>
           <Id>512321</Id>
@@ -38123,6 +37470,37 @@ Recommended Value</Description>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d141</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
+          <Id>512394</Id>
+          <Name>Reinforcement of 600 x 600 x 900mm</Name>
+          <MaterialName>Reinforcement</MaterialName>
+          <CarboMaterialName>Reinforcement</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade />
+          <Category>Reinforcement</Category>
+          <SubCategory>Structural Foundations</SubCategory>
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction>*(250/7850)</Correction>
+          <Volume>0.108</Volume>
+          <Volume_Total>0.0036217834394904453</Volume_Total>
+          <Mass>28.430999999999994</Mass>
+          <Density>7850</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.87179999999999991</ECI>
+          <EC>24.786145799999993</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>250</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d18a</GUID>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
@@ -38157,6 +37535,37 @@ Recommended Value</Description>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
+          <Id>512445</Id>
+          <Name>Reinforcement of 600 x 600 x 900mm</Name>
+          <MaterialName>Reinforcement</MaterialName>
+          <CarboMaterialName>Reinforcement</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade />
+          <Category>Reinforcement</Category>
+          <SubCategory>Structural Foundations</SubCategory>
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction>*(250/7850)</Correction>
+          <Volume>0.108</Volume>
+          <Volume_Total>0.0036217834394904453</Volume_Total>
+          <Mass>28.430999999999994</Mass>
+          <Density>7850</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.87179999999999991</ECI>
+          <EC>24.786145799999993</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>250</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1bd</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
           <Id>512447</Id>
           <Name>Reinforcement of 600mm Diameter</Name>
           <MaterialName>Reinforcement</MaterialName>
@@ -38185,6 +37594,37 @@ Recommended Value</Description>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1bf</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
+          <Id>512449</Id>
+          <Name>Reinforcement of 600 x 600 x 900mm</Name>
+          <MaterialName>Reinforcement</MaterialName>
+          <CarboMaterialName>Reinforcement</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade />
+          <Category>Reinforcement</Category>
+          <SubCategory>Structural Foundations</SubCategory>
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction>*(250/7850)</Correction>
+          <Volume>0.108</Volume>
+          <Volume_Total>0.0036217834394904453</Volume_Total>
+          <Mass>28.430999999999994</Mass>
+          <Density>7850</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.87179999999999991</ECI>
+          <EC>24.786145799999993</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>250</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1c1</GUID>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
@@ -38219,6 +37659,37 @@ Recommended Value</Description>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
+          <Id>512469</Id>
+          <Name>Reinforcement of 600 x 600 x 900mm</Name>
+          <MaterialName>Reinforcement</MaterialName>
+          <CarboMaterialName>Reinforcement</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade />
+          <Category>Reinforcement</Category>
+          <SubCategory>Structural Foundations</SubCategory>
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction>*(250/7850)</Correction>
+          <Volume>0.108</Volume>
+          <Volume_Total>0.0036217834394904453</Volume_Total>
+          <Mass>28.430999999999994</Mass>
+          <Density>7850</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.87179999999999991</ECI>
+          <EC>24.786145799999993</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>250</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1d5</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
           <Id>512471</Id>
           <Name>Reinforcement of 600mm Diameter</Name>
           <MaterialName>Reinforcement</MaterialName>
@@ -38247,6 +37718,37 @@ Recommended Value</Description>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1d7</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
+          <Id>512473</Id>
+          <Name>Reinforcement of 600 x 600 x 900mm</Name>
+          <MaterialName>Reinforcement</MaterialName>
+          <CarboMaterialName>Reinforcement</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade />
+          <Category>Reinforcement</Category>
+          <SubCategory>Structural Foundations</SubCategory>
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction>*(250/7850)</Correction>
+          <Volume>0.108</Volume>
+          <Volume_Total>0.0036217834394904453</Volume_Total>
+          <Mass>28.430999999999994</Mass>
+          <Density>7850</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.87179999999999991</ECI>
+          <EC>24.786145799999993</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>250</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d1d9</GUID>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
@@ -38281,6 +37783,37 @@ Recommended Value</Description>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
+          <Id>512522</Id>
+          <Name>Reinforcement of 600 x 600 x 900mm</Name>
+          <MaterialName>Reinforcement</MaterialName>
+          <CarboMaterialName>Reinforcement</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade />
+          <Category>Reinforcement</Category>
+          <SubCategory>Structural Foundations</SubCategory>
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction>*(250/7850)</Correction>
+          <Volume>0.108</Volume>
+          <Volume_Total>0.0036217834394904453</Volume_Total>
+          <Mass>28.430999999999994</Mass>
+          <Density>7850</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.87179999999999991</ECI>
+          <EC>24.786145799999993</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>250</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d20a</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
           <Id>512524</Id>
           <Name>Reinforcement of 600mm Diameter</Name>
           <MaterialName>Reinforcement</MaterialName>
@@ -38312,6 +37845,37 @@ Recommended Value</Description>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
+          <Id>512526</Id>
+          <Name>Reinforcement of 600 x 600 x 900mm</Name>
+          <MaterialName>Reinforcement</MaterialName>
+          <CarboMaterialName>Reinforcement</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade />
+          <Category>Reinforcement</Category>
+          <SubCategory>Structural Foundations</SubCategory>
+          <AdditionalData />
+          <Area>1.44</Area>
+          <Correction>*(250/7850)</Correction>
+          <Volume>0.108</Volume>
+          <Volume_Total>0.0036217834394904453</Volume_Total>
+          <Mass>28.430999999999994</Mass>
+          <Density>7850</Density>
+          <Level>-550</Level>
+          <LevelName>Level Lower</LevelName>
+          <ECI>0.87179999999999991</ECI>
+          <EC>24.786145799999993</EC>
+          <Volume_Cumulative>0.11162178343949045</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150945</ECI_Cumulative>
+          <EC_Cumulative>59.230870919999994</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>250</rcDensity>
+          <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d20e</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
           <Id>512528</Id>
           <Name>Reinforcement of 600mm Diameter</Name>
           <MaterialName>Reinforcement</MaterialName>
@@ -38340,6 +37904,37 @@ Recommended Value</Description>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>656284ae-d84a-4c5c-ae16-d638fa151c7e-0007d210</GUID>
+        </CarboElement>
+        <CarboElement>
+          <isUpdated>false</isUpdated>
+          <Id>1175183</Id>
+          <Name>Reinforcement of 3800 x 3800 x 600mm</Name>
+          <MaterialName>Reinforcement</MaterialName>
+          <CarboMaterialName>Reinforcement</CarboMaterialName>
+          <MaterialCategoryName>Concrete</MaterialCategoryName>
+          <Grade />
+          <Category>Reinforcement</Category>
+          <SubCategory>Structural Foundations</SubCategory>
+          <AdditionalData />
+          <Area>44.08</Area>
+          <Correction>*(250/7850)</Correction>
+          <Volume>14.44</Volume>
+          <Volume_Total>0.48424585987261143</Volume_Total>
+          <Mass>3801.33</Mass>
+          <Density>7850</Density>
+          <Level>0</Level>
+          <LevelName>Level 1</LevelName>
+          <ECI>0.87179999999999991</ECI>
+          <EC>3313.9994939999997</EC>
+          <Volume_Cumulative>14.924245859872611</Volume_Cumulative>
+          <ECI_Cumulative>0.19653962264150943</ECI_Cumulative>
+          <EC_Cumulative>7919.3868156</EC_Cumulative>
+          <isDemolished>false</isDemolished>
+          <isExisting>false</isExisting>
+          <isSubstructure>false</isSubstructure>
+          <includeInCalc>true</includeInCalc>
+          <rcDensity>250</rcDensity>
+          <GUID>d86ad9c9-b7ad-4131-8d26-64410fd18def-0011ee8f</GUID>
         </CarboElement>
         <CarboElement>
           <isUpdated>false</isUpdated>
@@ -38628,13 +38223,13 @@ Recommended Value</Description>
       <isAutoReinforcementGroup>true</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2023</Id>
+      <Id>2020</Id>
       <MaterialName>Reinforcement</MaterialName>
       <Category>Reinforcement</Category>
       <SubCategory />
-      <Description>Floors reinforcement 175 kg/m³(Substructure)</Description>
+      <Description>Floors reinforcement 175 kg/m³</Description>
       <Volume>3.5037</Volume>
-      <VolumeLink>2006</VolumeLink>
+      <VolumeLink>2005</VolumeLink>
       <Grade />
       <TotalVolume>0.090472452133757944</TotalVolume>
       <Density>7850</Density>
@@ -38649,10 +38244,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -38816,211 +38413,10 @@ Recommended Value</Description>
           <EC_Cumulative>15122.853060880498</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>175</rcDensity>
           <GUID>66314231-2860-4f9f-87a8-f581c5b96b2f-0009e2e4</GUID>
-        </CarboElement>
-      </AllElements>
-      <isExisting>false</isExisting>
-      <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
-      <RcDensity>0</RcDensity>
-      <isAutoReinforcementGroup>true</isAutoReinforcementGroup>
-    </CarboGroup>
-    <CarboGroup>
-      <Id>2024</Id>
-      <MaterialName>Reinforcement</MaterialName>
-      <Category>Reinforcement</Category>
-      <SubCategory />
-      <Description>Walls reinforcement 109 kg/m³</Description>
-      <Volume>0.3024</Volume>
-      <VolumeLink>2011</VolumeLink>
-      <Grade />
-      <TotalVolume>0.00486362054522293</TotalVolume>
-      <Density>7850</Density>
-      <Mass>38.17942128</Mass>
-      <ECI>0.87179999999999991</ECI>
-      <EC>0.033284819471903995</EC>
-      <PerCent>0.02</PerCent>
-      <Correction>*(109/7850)</Correction>
-      <CorrectionDescription />
-      <Waste>5.3</Waste>
-      <WasteDescription />
-      <Additional>0</Additional>
-      <AdditionalDescription />
-      <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
-        <designLifeToEnd>true</designLifeToEnd>
-        <name />
-        <B1>0</B1>
-        <B2>0</B2>
-        <B3>0</B3>
-        <B4>1</B4>
-        <B5>0</B5>
-        <B6>0</B6>
-        <B7>0</B7>
-        <totalECI>0</totalECI>
-        <totalValue>0</totalValue>
-        <assetType />
-      </inUseProperties>
-      <Material>
-        <Id>28081</Id>
-        <Name>Reinforcement</Name>
-        <Category>Steel</Category>
-        <Description>Recommended Value</Description>
-        <EPDurl>https://www.istructe.org/resources/guidance/how-to-calculate-embodied-carbon/</EPDurl>
-        <Grade />
-        <Density>7850</Density>
-        <ECI>1.3097999999999999</ECI>
-        <getVolumeECI>10281.929999999998</getVolumeECI>
-        <ECI_A1A3>0.72</ECI_A1A3>
-        <ECI_A4>0.1415</ECI_A4>
-        <ECI_A5>0</ECI_A5>
-        <ECI_B1B5>0</ECI_B1B5>
-        <ECI_C1C4>0.0103</ECI_C1C4>
-        <ECI_D>0.438</ECI_D>
-        <ECI_Seq>0</ECI_Seq>
-        <ECI_Mix>0</ECI_Mix>
-        <WasteFactor>5.3</WasteFactor>
-        <isLocked>false</isLocked>
-        <materialA1A3Properties>
-          <Id>0</Id>
-          <Category />
-          <Name />
-          <Description />
-          <Density>0</Density>
-          <ECI_A1A3>0</ECI_A1A3>
-        </materialA1A3Properties>
-        <materiaA4Properties>
-          <calcResult />
-          <name />
-          <description />
-          <distanceToSite>50</distanceToSite>
-          <materialDensity>500</materialDensity>
-          <emptyRun>80</emptyRun>
-          <emptyReturn>true</emptyReturn>
-          <vehicleSettings>
-            <name>Truck</name>
-            <maxVolume>96</maxVolume>
-            <maxLoad>22000</maxLoad>
-            <kmPer>3.85</kmPer>
-            <carboCostNew>280000</carboCostNew>
-            <totalDistance>250000</totalDistance>
-            <defaultFuel>Diesel</defaultFuel>
-            <description>An unspecified Vehicle</description>
-          </vehicleSettings>
-          <vehicleFuel>
-            <name>Diesel</name>
-            <emission>2.62</emission>
-            <production>0.4</production>
-            <unit>l</unit>
-          </vehicleFuel>
-          <value>0.010820543093270366</value>
-        </materiaA4Properties>
-        <materialA5Properties>
-          <calcResult />
-          <name />
-          <value>0</value>
-        </materialA5Properties>
-        <materialC1C4Properties>
-          <calcResult />
-          <propertyName />
-          <c1density>0</c1density>
-          <c1BaseValue>3.4</c1BaseValue>
-          <c1Value>0</c1Value>
-          <c2Properties>
-            <calcResult />
-            <name />
-            <description />
-            <distanceToSite>50</distanceToSite>
-            <materialDensity>500</materialDensity>
-            <emptyRun>80</emptyRun>
-            <emptyReturn>true</emptyReturn>
-            <vehicleSettings>
-              <name>Truck</name>
-              <maxVolume>96</maxVolume>
-              <maxLoad>22000</maxLoad>
-              <kmPer>3.85</kmPer>
-              <carboCostNew>280000</carboCostNew>
-              <totalDistance>250000</totalDistance>
-              <defaultFuel>Diesel</defaultFuel>
-              <description>An unspecified Vehicle</description>
-            </vehicleSettings>
-            <vehicleFuel>
-              <name>Diesel</name>
-              <emission>2.62</emission>
-              <production>0.4</production>
-              <unit>l</unit>
-            </vehicleFuel>
-            <value>0.010820543093270366</value>
-          </c2Properties>
-          <c2Value>0</c2Value>
-          <c3Value>0</c3Value>
-          <c4DisposalName>Generic</c4DisposalName>
-          <c4landfP>50</c4landfP>
-          <c4landfV>0.013</c4landfV>
-          <c4lanfResult>0</c4lanfResult>
-          <c4incfP>0</c4incfP>
-          <c4incfV>0</c4incfV>
-          <c4incResult>0</c4incResult>
-          <c4reUseP>50</c4reUseP>
-          <c4reUseV>0.005</c4reUseV>
-          <c4reUseResult>0</c4reUseResult>
-          <other>0</other>
-          <value>0</value>
-        </materialC1C4Properties>
-        <materialSeqProperties>
-          <propertyName>Sequestration</propertyName>
-          <value>0</value>
-          <sequestrationPeriod>40</sequestrationPeriod>
-          <comment />
-        </materialSeqProperties>
-        <materialDProperties>
-          <name />
-          <value>0</value>
-          <calcResult />
-        </materialDProperties>
-        <ECI_A1A3_Override>true</ECI_A1A3_Override>
-        <ECI_A4_Override>true</ECI_A4_Override>
-        <ECI_A5_Override>true</ECI_A5_Override>
-        <ECI_C1C4_Override>true</ECI_C1C4_Override>
-        <ECI_D_Override>true</ECI_D_Override>
-        <ECI_Seq_Override>true</ECI_Seq_Override>
-        <ECI_Mix_Info />
-      </Material>
-      <AllElements>
-        <CarboElement>
-          <isUpdated>false</isUpdated>
-          <Id>1115218</Id>
-          <Name>Reinforcement of CL_W1</Name>
-          <MaterialName>Reinforcement</MaterialName>
-          <CarboMaterialName>Reinforcement</CarboMaterialName>
-          <MaterialCategoryName>Concrete</MaterialCategoryName>
-          <Grade />
-          <Category>Reinforcement</Category>
-          <SubCategory>Walls</SubCategory>
-          <AdditionalData />
-          <Area>1.08</Area>
-          <Correction>*(109/7850)</Correction>
-          <Volume>0.3024</Volume>
-          <Volume_Total>0.0044214732229299362</Volume_Total>
-          <Mass>34.7085648</Mass>
-          <Density>7850</Density>
-          <Level>-1200</Level>
-          <LevelName>Foundation</LevelName>
-          <ECI>0.87179999999999991</ECI>
-          <EC>30.258926792639993</EC>
-          <Volume_Cumulative>0.30682147322292996</Volume_Cumulative>
-          <ECI_Cumulative>0.23456309454606403</ECI_Cumulative>
-          <EC_Cumulative>179.00560700064</EC_Cumulative>
-          <isDemolished>false</isDemolished>
-          <isExisting>false</isExisting>
-          <isSubstructure>false</isSubstructure>
-          <includeInCalc>true</includeInCalc>
-          <rcDensity>109</rcDensity>
-          <GUID>08db5da7-cb06-4fcc-ab79-ff953d5a5a20-00110452</GUID>
         </CarboElement>
       </AllElements>
       <isExisting>false</isExisting>
@@ -39030,13 +38426,13 @@ Recommended Value</Description>
       <isAutoReinforcementGroup>true</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2025</Id>
+      <Id>2021</Id>
       <MaterialName>Reinforcement</MaterialName>
       <Category>Reinforcement</Category>
       <SubCategory />
       <Description>Structural Columns reinforcement 200 kg/m³</Description>
       <Volume>0.6075</Volume>
-      <VolumeLink>2013</VolumeLink>
+      <VolumeLink>2011</VolumeLink>
       <Grade />
       <TotalVolume>0.01792782802547771</TotalVolume>
       <Density>7850</Density>
@@ -39051,10 +38447,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -39231,13 +38629,13 @@ Recommended Value</Description>
       <isAutoReinforcementGroup>true</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2026</Id>
+      <Id>2022</Id>
       <MaterialName>Reinforcement</MaterialName>
       <Category>Reinforcement</Category>
       <SubCategory />
-      <Description>Structural Foundations reinforcement 250 kg/m³(Substructure)</Description>
+      <Description>Structural Foundations reinforcement 250 kg/m³</Description>
       <Volume>14.5638</Volume>
-      <VolumeLink>2015</VolumeLink>
+      <VolumeLink>2013</VolumeLink>
       <Grade />
       <TotalVolume>0.53723724649681526</TotalVolume>
       <Density>7850</Density>
@@ -39252,10 +38650,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -39419,7 +38819,7 @@ Recommended Value</Description>
           <EC_Cumulative>1471.6129253669997</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>f4bb716f-cdfc-4bdf-af35-1a12450670d4-0011f9a3</GUID>
@@ -39450,7 +38850,7 @@ Recommended Value</Description>
           <EC_Cumulative>3046.8250314449997</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>f4bb716f-cdfc-4bdf-af35-1a12450670d4-0011f9ad</GUID>
@@ -39481,7 +38881,7 @@ Recommended Value</Description>
           <EC_Cumulative>1125.496234278</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>f4bb716f-cdfc-4bdf-af35-1a12450670d4-0011f9c1</GUID>
@@ -39512,7 +38912,7 @@ Recommended Value</Description>
           <EC_Cumulative>2343.3487524719994</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>f4bb716f-cdfc-4bdf-af35-1a12450670d4-0011f9cb</GUID>
@@ -39520,18 +38920,18 @@ Recommended Value</Description>
       </AllElements>
       <isExisting>false</isExisting>
       <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <RcDensity>0</RcDensity>
       <isAutoReinforcementGroup>true</isAutoReinforcementGroup>
     </CarboGroup>
     <CarboGroup>
-      <Id>2027</Id>
+      <Id>2023</Id>
       <MaterialName>Reinforcement</MaterialName>
       <Category>Reinforcement</Category>
       <SubCategory />
-      <Description>Structural Foundations reinforcement 250 kg/m³(Substructure)</Description>
+      <Description>Structural Foundations reinforcement 250 kg/m³</Description>
       <Volume>0.864</Volume>
-      <VolumeLink>2016</VolumeLink>
+      <VolumeLink>2014</VolumeLink>
       <Grade />
       <TotalVolume>0.031871694267515918</TotalVolume>
       <Density>7850</Density>
@@ -39546,10 +38946,12 @@ Recommended Value</Description>
       <Additional>0</Additional>
       <AdditionalDescription />
       <inUseProperties>
-        <calcResult />
-        <elementdesignlife>50</elementdesignlife>
+        <calcResult>B1-B5 calculation:
+This material is intended to last as long as the building: 60 year(s)
+</calcResult>
+        <elementdesignlife>60</elementdesignlife>
         <designLifeToEnd>true</designLifeToEnd>
-        <name />
+        <name>60 years design life , 1 time created</name>
         <B1>0</B1>
         <B2>0</B2>
         <B3>0</B3>
@@ -39713,7 +39115,7 @@ Recommended Value</Description>
           <EC_Cumulative>78.974494559999982</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>a9765818-e7e5-4bc4-b2dc-cf3423a7131f-00151381</GUID>
@@ -39744,7 +39146,7 @@ Recommended Value</Description>
           <EC_Cumulative>78.974494559999982</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>a9765818-e7e5-4bc4-b2dc-cf3423a7131f-00151396</GUID>
@@ -39775,7 +39177,7 @@ Recommended Value</Description>
           <EC_Cumulative>78.974494559999982</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>a9765818-e7e5-4bc4-b2dc-cf3423a7131f-001513a7</GUID>
@@ -39806,7 +39208,7 @@ Recommended Value</Description>
           <EC_Cumulative>78.974494559999982</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>eae8d474-ca63-4caa-91c3-113981533040-0015df19</GUID>
@@ -39837,7 +39239,7 @@ Recommended Value</Description>
           <EC_Cumulative>78.974494559999982</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>d2603e78-482b-4f40-8ab4-883049f8cc67-0015ecc4</GUID>
@@ -39868,7 +39270,7 @@ Recommended Value</Description>
           <EC_Cumulative>78.974494559999982</EC_Cumulative>
           <isDemolished>false</isDemolished>
           <isExisting>false</isExisting>
-          <isSubstructure>true</isSubstructure>
+          <isSubstructure>false</isSubstructure>
           <includeInCalc>true</includeInCalc>
           <rcDensity>250</rcDensity>
           <GUID>d2603e78-482b-4f40-8ab4-883049f8cc67-0015eced</GUID>
@@ -39876,7 +39278,7 @@ Recommended Value</Description>
       </AllElements>
       <isExisting>false</isExisting>
       <isDemolished>false</isDemolished>
-      <isSubstructure>true</isSubstructure>
+      <isSubstructure>false</isSubstructure>
       <RcDensity>0</RcDensity>
       <isAutoReinforcementGroup>true</isAutoReinforcementGroup>
     </CarboGroup>

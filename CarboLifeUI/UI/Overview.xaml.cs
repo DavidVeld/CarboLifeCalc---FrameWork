@@ -489,6 +489,7 @@ namespace CarboLifeUI.UI
                     {
                         CarboLifeProject.Area = convertedText;
                         txt_Area.Text = convertedText.ToString();
+                        RefreshPhasePie();
                         RefreshLetiGraph();
                         refreshSumary();
                     }

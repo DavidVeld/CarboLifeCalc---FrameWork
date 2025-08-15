@@ -40,13 +40,6 @@ namespace CarboCircle.UI
         private int dataSwitch = 0;
         string reportPath = "";
 
-        public CarboCircleMain()
-        {
-            InitializeComponent();
-            activeProject = new carboCircleProject();
-
-        }
-
         public CarboCircleMain(ExternalEvent exEvent, CarboCircleHandler handler)
         {
             InitializeComponent();

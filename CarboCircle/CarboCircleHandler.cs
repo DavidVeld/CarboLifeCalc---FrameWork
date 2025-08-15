@@ -39,7 +39,7 @@ namespace CarboCircle
             activeProject = new carboCircleProject();
             matchedPair = new carboCircleMatchElement();
 
-            _revitEvent = ExternalEvent.Create(this);
+            //_revitEvent = ExternalEvent.Create(this);
         }
 
         public event EventHandler<List<carboCircleElement>> DataReady;

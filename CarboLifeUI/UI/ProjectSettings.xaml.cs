@@ -123,8 +123,8 @@ namespace CarboLifeUI.UI
                     txt_DesignLife.Text = CarboLifeProject.designLife.ToString();
                     
                     //A5
-                    txt_Value.Text = CarboLifeProject.Value.ToString();
-                    txt_ValueA5Fact.Text = CarboLifeProject.A5Factor.ToString();
+                    //txt_Value.Text = CarboLifeProject.Value.ToString();
+                    txt_ValueA5Fact.Text = CarboLifeProject.A5AreaFactor.ToString();
 
                     txt_SocialCost.Text = CarboLifeProject.SocialCost.ToString();
 
@@ -142,7 +142,7 @@ namespace CarboLifeUI.UI
                     txt_C1Total.Text = CarboLifeProject.C1Global.ToString();
 
                     lbl_Currency.Content = CarboLifeProject.valueUnit.ToString();
-                    lbl_Currencyunit.Content = "kgCO₂e/" + CarboLifeProject.valueUnit.ToString();
+                    lbl_Currencyunit.Content = "kgCO₂e/m²" + CarboLifeProject.valueUnit.ToString();
 
                     double valueInPercent = (CarboLifeProject.UncertFact * 100);
                     txt_Uncert.Text = valueInPercent.ToString();
@@ -341,7 +341,7 @@ namespace CarboLifeUI.UI
             RefreshInterFace();
 
         }
-
+        /*
         private async void txt_Value_TextChanged(object sender, TextChangedEventArgs e)
         {
             TextBox tb = (TextBox)sender;
@@ -352,14 +352,14 @@ namespace CarboLifeUI.UI
             RefreshInterFace();
 
         }
-
+        */
         private async void txt_ValueA5Fact_TextChanged(object sender, TextChangedEventArgs e)
         {
             TextBox tb = (TextBox)sender;
             int startLength = tb.Text.Length;
 
             await Task.Delay(1000);
-            CarboLifeProject.A5Factor = Utils.ConvertMeToDouble(tb.Text);
+            CarboLifeProject.A5AreaFactor = Utils.ConvertMeToDouble(tb.Text);
             RefreshInterFace();
 
         }

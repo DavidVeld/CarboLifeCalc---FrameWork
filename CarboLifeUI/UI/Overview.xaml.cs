@@ -489,13 +489,18 @@ namespace CarboLifeUI.UI
                     {
                         CarboLifeProject.Area = convertedText;
                         txt_Area.Text = convertedText.ToString();
-                        RefreshPhasePie();
-                        RefreshLetiGraph();
-                        refreshSumary();
+
+                        CarboLifeProject.CalculateProject();
+                        RefreshInterFace();
+
+
+                        //RefreshPhasePie();
+                        //RefreshLetiGraph();
+                        //refreshSumary();
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 //Resume async error.
             }
@@ -516,9 +521,14 @@ namespace CarboLifeUI.UI
                     {
                         CarboLifeProject.AreaNew = convertedText;
                         txt_AreaNew.Text = convertedText.ToString();
-                        RefreshLetiGraph();
-                        refreshSumary();
 
+                        CarboLifeProject.CalculateProject();
+                        RefreshInterFace();
+
+
+                        //RefreshPhasePie();
+                        //RefreshLetiGraph();
+                        //refreshSumary();
                     }
                 }
             }

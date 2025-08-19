@@ -208,7 +208,9 @@ namespace CarboLifeAPI.Data
             demoArea = 0;
             C1Global = 0;
             C1Factor = 3.40; // kg CO₂e per m2
-            //A5 Global
+            //A Global
+            A0Global = 1;
+
             A5Global = 0;
             A5AreaFactor = 20; //kg CO₂e per m2
             //Social
@@ -294,9 +296,11 @@ namespace CarboLifeAPI.Data
             demoArea = 0;
             C1Global = 0;
             C1Factor = 35; // kg CO₂e per m2
-            //A5 Global
+                           //A Global
+            A0Global = 1;
+
             A5Global = 0;
-            A5AreaFactor = 20; //kg CO₂e per vaue
+            A5AreaFactor = 20; //kg CO₂e per m2
             //Social
             SocialCost = 150;
             //Other
